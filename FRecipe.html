@@ -32,6 +32,7 @@
 
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Search...">
+            <ul id="suggestionsList" class="suggestions-dropdown"></ul>
             <button type="button" id="searchButton">Search</button>
         </div>
     </header>
@@ -166,27 +167,58 @@
             "ukoy": "Ukoy.html",
         };
     
-        function searchRecipe() {
+        function updateSuggestions() {
+        let input = document.getElementById("searchInput").value.toLowerCase().trim();
+        let suggestionsList = document.getElementById("suggestionsList");
+
+        
+        suggestionsList.innerHTML = '';
+        suggestionsList.style.display = 'none'; 
+
+        if (input.length === 0) return;
+
+        
+        let filtered = Object.keys(searchItems).filter(item => item.includes(input));
+
+        if (filtered.length === 0) return;
+
+        filtered.forEach(item => {
+            let listItem = document.createElement("li");
+            listItem.textContent = item;
+            listItem.addEventListener("click", () => {
+                document.getElementById("searchInput").value = item;
+                suggestionsList.style.display = 'none'; 
+                searchRecipe(); 
+            });
+            suggestionsList.appendChild(listItem);
+        });
+
+        suggestionsList.style.display = 'block'; 
+    }
+
+    function searchRecipe() {
         let input = document.getElementById("searchInput").value.toLowerCase().trim();
 
-        const lowerCaseSearchItems = Object.keys(searchItems).reduce((acc, key) => {
-        acc[key.toLowerCase()] = searchItems[key];
-        return acc;
-        }, {});
-
-        if (lowerCaseSearchItems[input]) {
-        document.getElementById("recipeFrame").src = lowerCaseSearchItems[input];
+        if (searchItems[input]) {
+            document.getElementById("recipeFrame").src = searchItems[input];
         } else {
             alert("No results found.");
         }
-}
+    }
 
-    
-        document.getElementById("searchButton").addEventListener("click", searchRecipe);
-        document.getElementById("searchInput").addEventListener("keypress", function(event) {
-            if (event.key === "Enter") {
-                searchRecipe();
-            }
+
+    document.getElementById("searchInput").addEventListener("input", updateSuggestions);
+    document.getElementById("searchButton").addEventListener("click", searchRecipe);
+    document.getElementById("searchInput").addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            searchRecipe();
+        }
+    });
+
+    document.addEventListener("click", function(event) {
+        if (!document.querySelector(".search-container").contains(event.target)) {
+            document.getElementById("suggestionsList").style.display = 'none';
+        }
         });
     </script>
 </body>

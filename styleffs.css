@@ -176,7 +176,8 @@ header {
         }
 
          .search-container {
-            display: flex;
+            display: inline-block;
+            position: relative;
             align-items: center;
         }
         .search-container input[type="text"] {
@@ -193,4 +194,27 @@ header {
             border-radius: 4px;
             cursor: pointer;
         } 
+        .suggestions-dropdown {
+            position: absolute;
+            top: 100%;
+            background: white;
+            border: 1px solid #ccc;
+            max-height: 200px;
+            width: 100%;
+            overflow-y: auto;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: none;
+            z-index: 1000;
+        }
+        
+        .suggestions-dropdown li {
+            padding: 8px;
+            cursor: pointer;
+        }
+        
+        .suggestions-dropdown li:hover {
+            background: #f0f0f0;
+        }
         
