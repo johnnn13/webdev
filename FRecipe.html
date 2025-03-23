@@ -55,7 +55,7 @@
             "balbacua": "Balbacua.html",
             "beef bistek": "Beef_Bistek_Tagalog.html",
             "beef mami": "Beef_Mami.HTML",
-            "beef papaitan": "Beef_Papaitan,html",
+            "beef papaitan": "Beef_Papaitan.html",
             "betamax": "Betamax.html",
             "bibingka": "Bibingka.html",
             "bicol express": "Bicol Express.html",
@@ -85,7 +85,7 @@
             "filipino style beef steak": "Filipino_Style_Beek_Steak.html",
             
             "ginataang laing": "Ginataan_Laing.HTML",
-            "ginataang alimasag": "Ginataang_Alimasag,html",
+            "ginataang alimasag": "Ginataang_Alimasag.html",
             "ginataang bilo bilo": "Ginataang_Bilo_bilo.html",
             "ginataang isda": "ginataang_Isda.html",
             "ginataang kuhol": "Ginataang_Kuhol.HTML",
@@ -104,7 +104,7 @@
 
             "kadyos baboy langka": "Kadyos_Baboy_Langka.HTML",
             "kalderetang kambing": "Kalderetang_Kambing.html",
-            "kare kare": "Kare_Kare",
+            "kare kare": "Kare_Kare.html",
             "kinamatisang manok": "Kinamatisang_Manok.html",
             "kinilaw na tuna": "Kinilaw_na_Tuna.HTML",
             "kutsinta": "Kutsinta.html",
@@ -167,19 +167,21 @@
         };
     
         function searchRecipe() {
-            let input = document.getElementById("searchInput").value.toLowerCase().trim();
-           
-            const lowerCaseSearchItems = Object.keys(searchItems).reduce((acc, key) => {
-                acc[key.toLowerCase()] = searchItems[key];
-                return acc;
-            }, {});
-    
-            if (lowerCaseSearchItems[input]) {
-                window.location.href = lowerCaseSearchItems[input];
-            } else {
-                alert("No results found.");
-            }
+        let input = document.getElementById("searchInput").value.toLowerCase().trim();
+
+        const lowerCaseSearchItems = Object.keys(searchItems).reduce((acc, key) => {
+        acc[key.toLowerCase()] = searchItems[key];
+        return acc;
+        }, {});
+
+        if (lowerCaseSearchItems[input]) {
+        // Instead of modifying innerHTML, update the existing iframe source
+        document.getElementById("recipeFrame").src = lowerCaseSearchItems[input];
+        } else {
+            alert("No results found.");
         }
+}
+
     
         document.getElementById("searchButton").addEventListener("click", searchRecipe);
         document.getElementById("searchInput").addEventListener("keypress", function(event) {
