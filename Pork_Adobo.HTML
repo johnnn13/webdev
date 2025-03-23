@@ -1,34 +1,82 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pork Adobo Recipe</title>
-    <link rel="stylesheet" href="styleffs.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff3e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: max-content;
+            padding: 10px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            max-width: 1000px;
+            width: 100%;
+            height: max-content;
+        }
+        .top-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+        }
+        .image {
+            width: 100%;
+            height: 250px;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            margin-left: 10%;
+            margin-top: 100px;
+        }
+        .recipes, .instructions {
+            padding: 20px;
+            margin-left: 40px;
+        }
+        h1 {
+            font-size: 1.8em;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.3em;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="Filipino Food Recipe" class="logo"> <!-- Add this line for the logo -->
-
-        <nav>
-            <b><ul>
-                <li><a href="HomeFFS.HTML">Home</a></li>
-                <li><a href="Recipe_Page.HTML">Recipe</a></li>
-                <li><a href="AboutFFS.HTML">About</a></li>
-            </b></ul>
-        </nav>
-    </header>
-
-    <div class="section-header">
-        <h2>Filipino Food Recipe</h2>
-    </div>
-    <div class="food-container">
-        <div class="food-card">
-            
-            <h2>Pork Adobo Recipe</h2> 
-            <p>Ingredients:</p>
+    <div class="container">
+        <h1>Pork Adobo</h1>
+        
+        <div class="top-section">
+            <div class="image">
+                <img src="FFS_Pics/Pork_Adobo.jpg" alt="Pork Adobo image" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="recipes">
+                <h2>Dish Recipes:</h2><br>
             <ul>
-                <li>2 lbs pork belly</li>
+				<li>2 lbs pork belly</li>
                 <li>2 tablespoons garlic</li>
                 <li>5 dried bay leaves</li>
                 <li>4 tablespoons vinegar</li>
@@ -37,7 +85,10 @@
                 <li>2 cups water</li>
                 <li>Salt to taste</li>
             </ul>
-            <p>Instructions:</p>
+            </div>
+        </div>
+        <div class="instructions">
+            <h2>Instructions:</h2><br>
             <ol>
                 <li>Combine the pork belly, soy sauce, and garlic then marinate for at least 1 hour.</li><br>
                 <li>Heat the pot and put in the marinated pork belly then cook for a few minutes.</li><br>
@@ -45,24 +96,9 @@
                 <li>Add water, whole peppercorn, and dried bay leaves then bring to a boil. Simmer for 40 minutes to 1 hour.</li><br>
                 <li>Put in the vinegar and simmer for 12 to 15 minutes.</li><br>
                 <li>Add salt to taste.</li><br>
-                <li>Serve hot. Share and enjoy!</li><br>
+                <li>Serve hot. Share and enjoy!</li>
             </ol>
         </div>
     </div>
-    <div class="section-header1">
-        <img src="Logo1.png" alt="Filipino Kitchen" class="logo"> <!-- Add this line for the logo -->
-        <h2>Filipino Kitchen</h2>
-    </div>
-    
-    <div class="footer">
-        <p style="margin-left: 28em;"><b>© All Rights Reserved</b></p>
-        <p><b>Email Us:</b>FilipinoRecipes@gmail.com</p>
-        
-    </div>
-
-   
-
-
-
 </body>
 </html>

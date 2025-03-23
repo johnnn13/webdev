@@ -16,7 +16,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: max-content;
             padding: 10px;
         }
         .container {
@@ -29,6 +29,7 @@
             background: #ffffff;
             max-width: 1000px;
             width: 100%;
+            height: max-content;
         }
         .top-section {
             display: grid;
@@ -44,6 +45,7 @@
             justify-content: center;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
             margin-left: 10%;
+            margin-top: 100px;
         }
         .recipes, .instructions {
             padding: 20px;
@@ -68,7 +70,7 @@
         
         <div class="top-section">
             <div class="image">
-            <img src="FFS_Pics/Tamales.jpg" alt="Tamales_image">
+            <img src="FFS_Pics/Tamales.jpg" alt="Tamales image" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="recipes">
                 <h2>Dish Recipes:</h2><br>
@@ -94,13 +96,20 @@
         <div class="instructions">
             <h2>Instructions:</h2><br>
             <ol>
-                <li>Wash and dry the banana leaves. Cut them into squares about 20 cm wide. If using fresh banana leaves you may have to heat them first (direct heat) to become pliable. Set aside.</li>
-                <li>Saute onion and garlic just until tender. Pour in coconut milk and season with salt and pepper then let it cook until it starts to boil.</li>
-                <li>Add the rice flour and mix continuously until it thickens into a thick paste-like consistency. You may need some water if the mixture is too dry as some rice flour absorbs more liquid.</li>
-                <li>Divide the mixture into two. Set aside the other half for now and add the peanut butter and achuete powder to the other half and mix well.</li>
-                <li>Scoop some of the white mixture and place it in the middle of a leaf. Spread it to form a square about 10 cm wide. Now scoop some of the orange mixture and spread it on top of the white one. Top it with chicken flakes, ham, cashew, and egg.</li>
-                <li>Fold the sides of the leaf inwards to wrap the tamales in. Wrap this again in another banana leaf placing the top side down to seal it properly. Repeat it at least 2 times more, using at least 4 leaves in the process. Tie it with a string to secure it.</li>
-                <li>Boil or steam for 20-30 minutes.</li>
+                <li>Wash and dry the banana leaves. Cut them into squares about 20 cm wide. If using fresh banana 
+                    leaves you may have to heat them first (direct heat) to become pliable. Set aside.</li><br>
+                <li>Saute onion and garlic just until tender. Pour in coconut milk and season with salt and pepper 
+                    then let it cook until it starts to boil.</li><br>
+                <li>Add the rice flour and mix continuously until it thickens into a thick paste-like consistency. 
+                    You may need some water if the mixture is too dry as some rice flour absorbs more liquid.</li><br>
+                <li>Divide the mixture into two. Set aside the other half for now and add the peanut butter and achuete 
+                    powder to the other half and mix well.</li><br>
+                <li>Scoop some of the white mixture and place it in the middle of a leaf. Spread it to form a square about 10 cm wide. 
+                    Now scoop some of the orange mixture and spread it on top of the white one. Top it with chicken flakes, ham, cashew, and egg.</li><br>
+                <li>Fold the sides of the leaf inwards to wrap the tamales in. Wrap this again in another banana leaf placing 
+                    the top side down to seal it properly. Repeat it at least 2 times more, using at least 4 leaves in the process. 
+                    Tie it with a string to secure it.</li><br>
+                <li>Boil or steam for 20-30 minutes.</li><br>
                 <li>Serve while hot but can also be eaten cold</li>
             </ol>
         </div>
