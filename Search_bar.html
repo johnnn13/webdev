@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar</title>
+</head>
+
+    <style>
+        #noResult {
+        color: red;
+        display: none;
+        position: absolute;
+        font-size: small;
+        margin-bottom: 50px;
+        margin-left:610px;
+    }
+
+    .suggestion {
+            position: relative;
+            display: inline-block;
+            margin-left: 600px;
+            margin-top: 15px;
+        }
+
+        .suggestbtn {
+            background: #f8f8f8;
+            border: none;
+            padding: 5px 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .suggest:hover {
+            background: #e8e8e8;
+        }
+
+        .suggestdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+            padding: 10px 0;
+        }
+
+        .suggestdown-content a {
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .suggestdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .suggestion:hover .suggestdown-content {
+            display: block;
+        }
+    </style>
+
+<body>
+            <span id="noResult"> Sorry No Match Found </span>
+        <!-- <div class="suggestion">
+            <button class="suggestbtn"> <input type="text" id="searchBox" placeholder="Search Filipino Food" onkeypress="handleKeyPress(event)"> </button> 
+            <div class="suggestdown-content">
+                <p style="padding-left: 22px; font-weight:bold ;"> Suggestion: </p>
+                <a href="Adobong_Manok.html">Adobong Manok</a>
+                <a href="Atsara.html">Atsara</a>
+                <a href="Bibingka.html">Bibingka</a>
+                <a href="Bicol Express.html">Bicol Express</a>
+                <a href="Biko.html">Biko</a>
+                <a href="Champorado.html">Champorado</a>
+                <a href="Halo-halo.html">Halo-halo</a>
+                <a href="Kutsinta.html">Kutsinta</a>
+                <a href="Lechon-Manok.html">Lechon Manok</a>
+                <a href="Maja Blanca.html">Maja Blanca</a>
+                <a href="Nilagang_Manok.HTML">Nilagang Manok</a>
+                <a href="Paksiw.HTML">Paksiw</a>
+                <a href="Pancit_Bihon.HTML">Pancit Bihon</a>
+                <a href="Pinakbet.HTML">Pinakbet</a>
+            </div>
+        </div> -->
+
+    <script>
+        const searchItems = {
+            "adidas": "Adidas.html",
+            "adobong manok": "Adobong_Manok.html",
+            "atsara": "Atsara.html",
+
+            "bagnet": "Bagnet.html",
+            "balbacua": "Balbacua.html",
+            "beef bistek": "Beef_Bistek_Tagalog.html",
+            "beef mami": "Beef_Mami.HTML",
+            "beef papaitan": "Beef_Papaitan,html",
+            "betamax": "Betamax.html",
+            "bibingka": "Bibingka.html",
+            "bicol express": "Bicol Express.html",
+            "biko": "Biko.html",
+            "binagoongan baboy": "Binagoongan_Baboy.html",
+            "buko pandone": "Buko_Pandone.html",
+            "bulalo": "Bulalo.html",
+
+            "camaron rebosado": "Camaron_Rebosado.html",
+            "cassava cake": "Cassava_Cake.html",
+            "champorado": "Champorado.html",
+            "chicharon bulaklak": "Chicharon_Bulaklak.html",
+            "chicken arroz caldo": "Chicken_Arroz_Caldo.html",
+            "chicken asado": "Chicken_Asado.html",
+            "chicken curry": "Chicken_Curry.HTML",
+            "chicken sotanghon": "Chicken_Sottanghon.html",
+            "chopsuey": "Chopsuey.html",
+            "crispy pata": "Crispy_Pata.html",
+
+            "daing na bangus": "Daing_na_Bangus.html",
+            "dinakdakan": "Dinakdakan.html",
+            "dinuguan": "Dinuguan.html",
+
+            "embutido": "Embutido.html",
+            "espasol": "Espasol.html",
+
+            "filipino style beef steak": "Filipino_Style_Beek_Steak.html",
+            
+            "ginataang laing": "Ginataan_Laing.HTML",
+            "ginataang alimasag": "Ginataang_Alimasag,html",
+            "ginataang bilo bilo": "Ginataang_Bilo_bilo.html",
+            "ginataang isda": "ginataang_Isda.html",
+            "ginataang kuhol": "Ginataang_Kuhol.HTML",
+            "ginataang langka": "Ginataang_Langka.html",
+            "ginataang santol": "Ginataang_Santol.html",
+            "ginataang sitaw kalabasa": "Ginataang_Sitaw_Kalabasa.html",
+            "ginisang amplaya": "Ginisang_Ampalaya.HTML",
+            "ginisang pusit": "Ginisang_Pusit.HTML",
+            "goto": "Goto.html",
+
+            "halo halo": "Halo_halo.html",
+            "hardinera": "Hardinera.HTML",
+
+            "inihaw na liempo": "Inihaw_na_Liempo.HTML",
+            "isaw": "Isaw.html",
+
+            "kadyos baboy langka": "Kadyos_Baboy_Langka.HTML",
+            "kalderetang kambing": "Kalderetang_Kambing.html",
+            "kare kare": "Kare_Kare",
+            "kinamatisang manok": "Kinamatisang_Manok.html",
+            "kinilaw na tuna": "Kinilaw_na_Tuna.HTML",
+            "kutsinta": "Kutsinta.html",
+            "kwek kwek": "Kwek_kwek.html",
+
+            "la paz batchoy": "La_Paz_Batchoy.HTML",
+            "leche flan": "Leche_Flan.html",
+            "lechon manok": "Lechon_Manok.html",
+            "lechon paksiw": "Lechon_Paksiw.html",
+            "lumpia": "Lumpia.html",
+
+            "maja blanca": "Maja_Blanca.html",
+
+            "nilagang baka": "Nilagang_Baka.html",
+            "nilagang manok": "Nilagang_Manok.html",
+
+            "paksiw": "Paksiw.HTML",
+            "pancit bato guisado": "Pancit_Bato_Guisado.HTML",
+            "pancit bihon": "Pancit_Bihon.HTML",
+            "pancit canton": "Pancit_Canton.HTML",
+            "pancit habhab": "Pancit_Habhab.HTML",
+            "pinais na hipon": "Pinais_na_Hipon.HTML",
+            "pinakbet": "Pinakbet.HTML",
+            "pinaltok": "Pinaltok.html",
+            "Pininyahang manok": "Pininyahang_Manok.html",
+            "pochero": "Pochero.HTML",
+            "pork adobo": "Pork_Adobo.HTML",
+            "pork chop steal": "Pork_Chop_Steak.html",
+            "pork menudo": "Pork_Menudo.html",
+            "pork sisig": "Pork_Sisig.html",
+            "Pritong hito": "Pritong_Hito.html",
+            "Puto bumbong": "Puto_Bumbong.html",
+            "puto": "Puto.html",
+
+            "Relyenong bangus": "Relyenong_Bangus.html",
+
+            "Saing con heilo": "Saging_Con_Hielo.html",
+            "sapin sapin": "Sapin_sapin.html",
+            "sinaing na tulingan": "Sinaing_na_Tulingan.HTML",
+            "sinangag": "Sinangag.HTML",
+            "sinigang na baboy": "Sinigang_na_Baboy.html",
+            "sinigang na bagnet": "Sinigang_na_Bagnet.html",
+            "sinigang na bangus": "Sinigang_na_Bangus.html",
+            "sinigang sa miso": "Sinigang_sa_Miso.html",
+
+            "suman sa lihiya": "Suman_sa_Lihiya.html",
+
+            "taho": "Taho.html",
+            "tamales": "Tamales.html",
+            "tambakol": "Tambakol.html",
+            "tapsilog": "Tapsilog.html",
+            "tinolang isda": "Tinolang_Isda.html",
+            "tinolang manok": "Tinolang_Manok.HTML",
+            "tokwa't baboy": "Tokwa't_Baboy.html",
+            "tortang talong": "Tortang_Talong.HTML",
+            "turon": "Turon.html",
+
+            "ube halaya": "Ube_Halaya.html",
+            "ukoy": "Ukoy.html",
+        };
+    
+        function handleKeyPress(event) {
+            if (event.key === "Enter") { 
+                let input = document.getElementById("searchBox").value.toLowerCase().trim();
+                let noResultText = document.getElementById("noResult");
+    
+                if (searchItems[input]) {
+                    window.location.href = searchItems[input];
+                    noResultText.style.display = "none"; 
+                } else {
+                    noResultText.style.display = "block"; 
+                }
+            }
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

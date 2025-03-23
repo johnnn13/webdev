@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pritong Hito Recipe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff3e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 10px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            max-width: 1000px;
+            width: 100%;
+        }
+        .top-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+        }
+        .image {
+            width: 100%;
+            height: 250px;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            margin-left: 10%;
+        }
+        .recipes, .instructions {
+            padding: 20px;
+            margin-left: 40px;
+        }
+        h1 {
+            font-size: 1.8em;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.3em;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pritong Hito</h1>
+        
+        <div class="top-section">
+            <div class="image">
+            <img src="FFS_Pics/Camaron_Rebosado.jpg" alt="">
+            </div>
+            <div class="recipes">
+                <h2>Dish Recipes:</h2><br>
+            <ul>
+				<li>3/4 kilo Hito</li>
+                <li>Crispy Mix</li>
+                <li>Cooking oil</li>
+                <li>1 whole egg</li>
+            </ul>
+            </div>
+        </div>
+        <div class="instructions">
+            <h2>Instructions:</h2><br>
+            <ol>
+                <li>Dip the Hito in a bowl of egg</li>
+                <li>Bread the Hito with the crispy mix and set aside.</li>
+                <li>Heat cooking oil in a pan and when it is done you can now start deep- frying the Hito.</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

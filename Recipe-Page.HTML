@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet" href="styleffs.css">
+</head>
+
+    <style>
+        .gallery {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        .gallery .dish {
+            background-color: #deb887;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px;
+            border: #1d1d1d solid;
+        }
+
+        .gallery .description {
+            text-decoration: underline  #deb887;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+            font-weight: bolder;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .gallery img{
+            height: 250px;
+            width: 250px;
+            border-radius: 30px;
+        }
+        .gallery .dish:hover {
+            background-color: rgb(243, 243, 243);
+            border-color: #000000;
+            text-decoration-skip: none;
+            color: black;
+        }
+    </style>
+<body>
+    <header>
+        <img src="FFR no bg.png" alt="Filipino Food Recipe" class="logo">
+        <h2 style="margin-right: 20%;">Kusina ng Bayan</h2>
+        <nav>
+            <b><ul>
+                <li><a href="HomeFFS.HTML">Home</a></li>
+                <li><a href="Recipe-Page.html">Recipe</a></li>
+                <li><a href="AboutFFSNew.HTML">About</a></li>
+            </b></ul>
+        </nav>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button type="button" id="searchButton">Search</button>
+        </div>
+
+    </header>
+
+    <div class="gallery">
+        <div class="dish">
+            <a href="Hardinera.HTML">
+                <img src="/FFS_Pics/Hardinera2_1.webp" alt="">
+                <div class="description">Hardinera</div>
+            </a>
+        </div>
+
+        <div class="dish">
+            <a href="Paksiw.HTML">
+                <img src="FFS_Pics/Paksiw.jpg" alt="">
+                <div class="description">Paksiw</div>
+            </a>
+        </div>
+
+        <div class="dish">
+            <a href="Pancit_Canton.HTML">
+                <img src="FFS_Pics/Pancit_Canton.jpg" alt="">
+                <div class="description">Pancit Canton</div>
+            </a>
+        </div>
+
+        <div class="dish">
+            <a href="Pancit_Habhab.HTML">
+                <img src="FFS_Pics/Pancit_Habhab.jpg" alt="">
+                <div class="description">Pancit Habhab</div>
+            </a>
+        </div>
+
+        <div class="dish">
+            <a href="Inihaw_na_Liempo.HTML">
+                <img src="FFS_Pics/Inihaw_na_Liempo.jpg" alt="">
+                <div class="description">Inihaw na Liempo</div>
+            </a>
+        </div>
+
+        <div class="dish">
+            <a href="Tortang_Talong.HTML">
+                <img src="FFS_Pics/Tortang_Talong.jpg" alt="">
+                <div class="description">Tortang Talong</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Chicken_Sotanghon.html">
+                <img src="FFS_Pics/Chicken_Sotanghon.jpg" alt="">
+                <div class="description">Chicken Sotanghon</div>
+            </a>           
+        </div>
+        
+        <div class="dish">
+            <a href="Pancit_Bato_Guisado.HTML">
+                <img src="FFS_Pics/Pansit_Bato_Guisado.jpg" alt="">
+                <div class="description">Pancit Bato Guisado</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Pancit_Bihon.HTML">
+                <img src="FFS_Pics/Pancit_Bihon.jpg" alt="">
+                <div class="description">Pancit Bihon</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Beef_Mami.HTML">
+                <img src="FFS_Pics/Beef_Mami.jpg" alt="">
+                <div class="description">Beef Mami</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Kinilaw_na_Tuna.HTML">
+                <img src="FFS_Pics/Kinilaw_na_Tuna.jpg" alt="">
+                <div class="description">Kinilaw na Tuna</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Pork_Adobo.HTML">
+                <img src="FFS_Pics/Pork_Adobo.jpg" alt="">
+                <div class="description">Pork Adobo</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Beef_Bistek_Tagalog.html">
+                <img src="FFS_Pics/Beef_Bistek_Tagalog.jpg" alt="">
+                <div class="description">Beef Bistek Tagalog</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Pork_Sisig.html">
+                <img src="FFS_Pics/Pork_Sisig.jpg" alt="">
+                <div class="description">Pork Sisig</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Adobong_Manok.html">
+                <img src="FFS_Pics/Adobong_Manok.jpg" alt="">
+                <div class="description">Adobong Manok</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Nilagang_Baka.html">
+                <img src="FFS_Pics/Nilagang_Baka.jpg" alt="">
+                <div class="description">Nilagang Baka</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Lechon_Manok.html">
+                <img src="FFS_Pics/Lechon_Manok.jpg" alt="">
+                <div class="description">Lechon Manok</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Pochero.html">
+                <img src="FFS_Pics/Pochero.jpg" alt="">
+                <div class="description">Pochero</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="La_Paz_Batchoy.HTML">
+                <img src="FFS_Pics/La_Paz_Batchoy.jpg" alt="">
+                <div class="description">La Paz Batchoy</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Kadyos_Baboy_Langka.HTML">
+                <img src="FFS_Pics/Kadyos_Baboy_at_Langka.jpg" alt="">
+                <div class="description">Kadyos, Baboy,</div>
+                <div class="description">at Langka</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Pinakbet.HTML">
+                <img src="FFS_Pics/Pinakbet.jpg" alt="">
+                <div class="description">Pinakbet</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Ginataang_Isda.html">
+                <img src="FFS_Pics/Ginataang_Isda.jpg" alt="">
+                <div class="description">Ginataang Isda</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Pork_Menudo.html">
+                <img src="FFS_Pics/Pork_Menudo.jpg" alt="">
+                <div class="description">Pork Menudo</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Bicol_Express.html">
+                <img src="FFS_Pics/Bicol_Express.jpg" alt="">
+                <div class="description">Bicol Express</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Tambakol.html">
+                <img src="FFS_Pics/Tambakol.jpg" alt="">
+                <div class="description">Ginataang Tambakol</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Atsara.html">
+                <img src="FFS_Pics/Atsara.jpg" alt="">
+                <div class="description">Atsara</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Lechon_Paksiw.html">
+                <img src="FFS_Pics/Lechon_Paksiw.jpg" alt="">
+                <div class="description">Lechon Paksiw</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Ginataan_Laing.HTML">
+                <img src="FFS_Pics/Ginataan_Laing.jpg" alt="">
+                <div class="description">Ginataan Laing</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Chicken_Curry.HTML">
+                <img src="FFS_Pics/Chicken_Curry.jpg" alt="">
+                <div class="description">Chicken Curry</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Tinolang_Manok.HTML">
+                <img src="FFS_Pics/Tinolang_Manok.jpg" alt="">
+                <div class="description">Tinolang Manok</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Ginataang_Kuhol.HTML">
+                <img src="FFS_Pics/Ginataang_Kuhol.jpg" alt="">
+                <div class="description">Ginataang Kuhol</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Sinangag.HTML">
+                <img src="FFS_Pics/Sinangag.jpg" alt="">
+                <div class="description">Sinangag</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Ginisang_Ampalaya.HTML">
+                <img src="FFS_Pics/Ginisang_Ampalaya.jpg" alt="">
+                <div class="description">Ginisang Ampalaya</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Dinuguan.html">
+                <img src="FFS_Pics/Dinuguan.jpg" alt="">
+                <div class="description">Dinuguan</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Ukoy.html">
+                <img src="FFS_Pics/Ukoy.jpg" alt="">
+                <div class="description">Ukoy</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Sinigang_na_Bangus.html">
+                <img src="FFS_Pics/Sinigang_na_Bangus" alt="">
+                <div class="description">Sinigang na Bangus</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Sinigang_na_Baboy.html">
+                <img src="FFS_Pics/Sinigang_na_Baboy.jpg" alt="">
+                <div class="description">Sinigang na Baboy</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Ginataang_Alimasag.html">
+                <img src="FFS_Pics/Ginataang_Alimasag" alt="">
+                <div class="description">Ginataang Alimasag</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Chopsuey.html">
+                <img src="FFS_Pics/Chopsuey.jpg" alt="">
+                <div class="description">Chopsuey</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Camaron_Rebosado.html">
+                <img src="FFS_Pics/Camaron_Rebosado.jpg" alt="">
+                <div class="description">Camaron Rebosado</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Sinuglaw.html">
+                <img src="FFS_Pics/Sinuglaw.jpg" alt="">
+                <div class="description">Sinuglaw</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Binagoongan_Baboy.html">
+                <img src="FFS_Pics/Binagoongan_Baboy.jpg" alt="">
+                <div class="description">Binagoongan Baboy</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Balbacua.html">
+                <img src="FFS_Pics/Balbacua.jpg" alt="">
+                <div class="description">Balbacua</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Pinais_na_Hipon.html">
+                <img src="FFS_Pics/Pinais_na_Hipon.jpg" alt="">
+                <div class="description">Pinais na Hipon</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Tinolang_Isda.html">
+                <img src="FFS_Pics/Tinolang_Isda.jpg" alt="">
+                <div class="description">Tinolang Isda</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Sinaing_na_Tulingan.HTML">
+                <img src="FFS_Pics/Sinaing_na_Tulingan.jpg" alt="">
+                <div class="description">Sinaing na Tulingan</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Relyenong_Bangus.html">
+                <img src="FFS_Pics/Relyenong_Bangus.jpg" alt="">
+                <div class="description">Relyenong Bangus</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Isaw.html">
+                <img src="FFS_Pics/Isaw.jpg" alt="">
+                <div class="description">Isaw</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Tokwa't_ Baboy.html">
+                <img src="FFS_Pics/Tokwat_Baboy.jpg" alt="">
+                <div class="description">Tokwa't Baboy</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Betamax.html">
+                <img src="FFS_Pics/Betamax.jpg" alt="">
+                <div class="description">Betamax</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Kwek_kwek.html">
+                <img src="FFS_Pics/Kwek_kwek.jpg" alt="">
+                <div class="description">Kwek kwek</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Adidas.html">
+                <img src="FFS_Pics/Adidas.jpg" alt="">
+                <div class="description">Adidas</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Pritong_Hito.html">
+                <img src="FFS_Pics/Pritong_Hito.jpg" alt="">
+                <div class="description">Pritong Hito</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Tapsilog.html">
+                <img src="FFS_Pics/Tapsilog.jpg" alt="">
+                <div class="description">Tapsilog</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Kare_Kare.html">
+                <img src="FFS_Pics/Kare_Kare.jpg" alt="">
+                <div class="description">Kare Kare</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Bulalo.html">
+                <img src="FFS_Pics/Bulalo.jpg" alt="">
+                <div class="description">Bulalo</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Chicharon_Bulaklak.html">
+                <img src="FFS_Pics/Chicharon_Bulaklak.jpg" alt="">
+                <div class="description">Chicharon Bulaklak</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Goto.html">
+                <img src="FFS_Pics/Goto.jpg" alt="">
+                <div class="description">Goto</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Chicken_Arroz_Caldo.html">
+                <img src="FFS_Pics/Chicken_Arroz_Caldo.jpg" alt="">
+                <div class="description">Chicken Arroz Caldo</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Embutido.html">
+                <img src="FFS_Pics/Embutido.jpg" alt="">
+                <div class="description">Embutido</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Crispy_Pata.html">
+                <img src="FFS_Pics/Crispy_Pata.jpg" alt="">
+                <div class="description">Crispy Pata</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Daing_na_Bangus.html">
+                <img src="FFS_Pics/Daing_na_Bangus.jpg" alt="">
+                <div class="description">Daing na Bangus</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Bagnet.html">
+                <img src="FFS_Pics/Bagnet.jpg" alt="">
+                <div class="description">Bagnet</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Dinakdakan.html">
+                <img src="FFS_Pics/Dinakdakan.jpg" alt="">
+                <div class="description">Dinakdakan</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Ginataang_Santol.html">
+                <img src="FFS_Pics/Ginataang_Santol.jpg" alt="">
+                <div class="description">Ginataang Santol</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Bulalo.html">
+                <img src="FFS_Pics/Bulalo.jpg" alt="">
+                <div class="description">Bulalo</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Lumpia.html">
+                <img src="FFS_Pics/Lumpia.jpg" alt="">
+                <div class="description">Lumpia</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Chicken_Asado.html">
+                <img src="FFS_Pics/Chicken_Asado.jpg" alt="">
+                <div class="description">Chicken Asado</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Sinigang_Sa_Miso.html">
+                <img src="FFS_Pics/Sinigang_sa_Miso.jpg" alt="">
+                <div class="description">Sinigang sa Miso</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Ginisang_Pusit.html">
+                <img src="FFS_Pics/Ginisang_Pusit.jpg" alt="">
+                <div class="description">Ginisang Pusit</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Ginataang_Sitaw_Kalabasa.html">
+                <img src="FFS_Pics/Ginataang_Sitaw_Kalabasa.jpg" alt="">
+                <div class="description">Ginataang Sitaw</div>
+                <div class="description">Kalabasa</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Pork_Chop _Steak.html">
+                <img src="FFS_Pics/Pork_Chop_Steak.jpg" alt="">
+                <div class="description">Pork Chop Steak</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Kinamatisang_Manok.html">
+                <img src="FFS_Pics/Kinamatisang_Manok.jpg" alt="">
+                <div class="description">Kinamatisang Manok</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Sinigang_na_Bagnet.html">
+                <img src="FFS_Pics/Sinigang_na_Bagnet" alt="">
+                <div class="description">Sinigang na Bagnet</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Filipino_Style_Beef_Steak.html">
+                <img src="FFS_Pics/Filipino_Style_Beef_steak.jpg" alt="">
+                <div class="description">Filipino StyleBeef Steak</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Pininyahang_Manok.html">
+                <img src="FFS_Pics/Pininyahang_Manok.jpg" alt="">
+                <div class="description">Pininyahang Manok</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Kalderetang_Kambing.html">
+                <img src="FFS_Pics/Kalderetang_Kambing.jpg" alt="">
+                <div class="description">Kalderetang Kambing</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Beef_Papaitan.html">
+                <img src="FFS_Pics/Beef_Papaitan.jpg" alt="">
+                <div class="description">Beef Papaitan</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Ginataang_Langka.html">
+                <img src="FFS_Pics/Ginataang_Langka.jpg" alt="">
+                <div class="description">Ginataang Langka</div>
+            </a>           
+        </div>
+
+        <!-- Desserts -->
+        <div class="dish">
+            <a href="Pinaltok.html">
+                <img src="FFS_Pics/Pinaltok.jpg" alt="">
+                <div class="description">Pinaltok</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Biko.html">
+                <img src="FFS_Pics/Biko.jpg" alt="">
+                <div class="description">Biko</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Suman_sa_Lihiya.html">
+                <img src="FFS_Pics/Suman_sa_Lihiya.jpg" alt="">
+                <div class="description">Suman sa Lihiya</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Puto.html">
+                <img src="FFS_Pics/Puto.jpg" alt="">
+                <div class="description">Puto</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Tamales.html">
+                <img src="FFS_Pics/Tamales.jpg" alt="">
+                <div class="description">Tamales</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Leche_Flan.html">
+                <img src="FFS_Pics/Leche_Flan.jpg" alt="">
+                <div class="description">Leche Flan</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Buko_Pandone.html">
+                <img src="FFS_Pics/Buko_Pandone.jpg" alt="">
+                <div class="description">Buko Pandone</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Sapin_sapin.html">
+                <img src="FFS_Pics/Sapin_sapin.png" alt="">
+                <div class="description">Sapin-sapin</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Ube_Halaya.html">
+                <img src="FFS_Pics/Ube_Halaya.jpg" alt="">
+                <div class="description">Ube Halaya</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Espasol.html">
+                <img src="FFS_Pics/Espasol.jpg" alt="">
+                <div class="description">Espasol</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Cassava_Cake.html">
+                <img src="FFS_Pics/Cassava_Cake.jpg" alt="">
+                <div class="description">Cassava Cake</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Kutsinta.html">
+                <img src="FFS_Pics/Kutsinta.jpg" alt="">
+                <div class="description">Kutsinta</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Ginataang_Bilo_bilo_with_Langka.html">
+                <img src="FFS_Pics/Ginataang_Bilo_bilo_with_Langka.jpg" alt="">
+                <div class="description">Ginataang Bilo-bilo</div>
+                <div class="description">with Langka</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Champorado.html">
+                <img src="FFS_Pics/Champorado.jpg" alt="">
+                <div class="description">Champorado</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Taho.html">
+                <img src="FFS_Pics/Taho.jpg" alt="">
+                <div class="description">Taho</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Halo_halo.html">
+                <img src="FFS_Pics/Halo_halo.jpg" alt="">
+                <div class="description">Halo-halo</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Turon.html">
+                <img src="FFS_Pics/Turon.jpg" alt="">
+                <div class="description">Turon</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Puto_Bumbong.html">
+                <img src="FFS_Pics/Puto_Bumbong.jpg" alt="">
+                <div class="description">Puto Bumbong</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Bibingka.html">
+                <img src="FFS_Pics/Bibingka.jpg" alt="">
+                <div class="description">Bibingka</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Maja_Blanca.html">
+                <img src="FFS_Pics/Maja_Blanca.jpg" alt="">
+                <div class="description">Maja Blanca</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Saging_con_Hielo.html">
+                <img src="FFS_Pics/Saging_con_Hielo.jpg" alt="">
+                <div class="description">Saging Con Hielo</div>
+            </a>           
+        </div>
+
+
+
+
+    </div>
+
+    <div class="footer">
+        <img src="FFR no bg.png" alt="Logo" class="logo"> 
+        <p><b>© All Rights Reserved</b></p>
+    </div>
+
+    <script>
+        const searchItems = {
+            "adidas": "Adidas.html",
+            "adobong manok": "Adobong_Manok.html",
+            "atsara": "Atsara.html",
+
+            "bagnet": "Bagnet.html",
+            "balbacua": "Balbacua.html",
+            "beef bistek": "Beef_Bistek_Tagalog.html",
+            "beef mami": "Beef_Mami.HTML",
+            "beef papaitan": "Beef_Papaitan,html",
+            "betamax": "Betamax.html",
+            "bibingka": "Bibingka.html",
+            "bicol express": "Bicol Express.html",
+            "biko": "Biko.html",
+            "binagoongan baboy": "Binagoongan_Baboy.html",
+            "buko pandone": "Buko_Pandone.html",
+            "bulalo": "Bulalo.html",
+
+            "camaron rebosado": "Camaron_Rebosado.html",
+            "cassava cake": "Cassava_Cake.html",
+            "champorado": "Champorado.html",
+            "chicharon bulaklak": "Chicharon_Bulaklak.html",
+            "chicken arroz caldo": "Chicken_Arroz_Caldo.html",
+            "chicken asado": "Chicken_Asado.html",
+            "chicken curry": "Chicken_Curry.HTML",
+            "chicken sotanghon": "Chicken_Sottanghon.html",
+            "chopsuey": "Chopsuey.html",
+            "crispy pata": "Crispy_Pata.html",
+
+            "daing na bangus": "Daing_na_Bangus.html",
+            "dinakdakan": "Dinakdakan.html",
+            "dinuguan": "Dinuguan.html",
+
+            "embutido": "Embutido.html",
+            "espasol": "Espasol.html",
+
+            "filipino style beef steak": "Filipino_Style_Beek_Steak.html",
+            
+            "ginataang laing": "Ginataan_Laing.HTML",
+            "ginataang alimasag": "Ginataang_Alimasag,html",
+            "ginataang bilo bilo": "Ginataang_Bilo_bilo.html",
+            "ginataang isda": "ginataang_Isda.html",
+            "ginataang kuhol": "Ginataang_Kuhol.HTML",
+            "ginataang langka": "Ginataang_Langka.html",
+            "ginataang santol": "Ginataang_Santol.html",
+            "ginataang sitaw kalabasa": "Ginataang_Sitaw_Kalabasa.html",
+            "ginisang amplaya": "Ginisang_Ampalaya.HTML",
+            "ginisang pusit": "Ginisang_Pusit.HTML",
+            "goto": "Goto.html",
+
+            "halo halo": "Halo_halo.html",
+            "hardinera": "Hardinera.HTML",
+
+            "inihaw na liempo": "Inihaw_na_Liempo.HTML",
+            "isaw": "Isaw.html",
+
+            "kadyos baboy langka": "Kadyos_Baboy_Langka.HTML",
+            "kalderetang kambing": "Kalderetang_Kambing.html",
+            "kare kare": "Kare_Kare",
+            "kinamatisang manok": "Kinamatisang_Manok.html",
+            "kinilaw na tuna": "Kinilaw_na_Tuna.HTML",
+            "kutsinta": "Kutsinta.html",
+            "kwek kwek": "Kwek_kwek.html",
+
+            "la paz batchoy": "La_Paz_Batchoy.HTML",
+            "leche flan": "Leche_Flan.html",
+            "lechon manok": "Lechon_Manok.html",
+            "lechon paksiw": "Lechon_Paksiw.html",
+            "lumpia": "Lumpia.html",
+
+            "maja blanca": "Maja_Blanca.html",
+
+            "nilagang baka": "Nilagang_Baka.html",
+            "nilagang manok": "Nilagang_Manok.html",
+
+            "paksiw": "Paksiw.HTML",
+            "pancit bato guisado": "Pancit_Bato_Guisado.HTML",
+            "pancit bihon": "Pancit_Bihon.HTML",
+            "pancit canton": "Pancit_Canton.HTML",
+            "pancit habhab": "Pancit_Habhab.HTML",
+            "pinais na hipon": "Pinais_na_Hipon.HTML",
+            "pinakbet": "Pinakbet.HTML",
+            "pinaltok": "Pinaltok.html",
+            "Pininyahang manok": "Pininyahang_Manok.html",
+            "pochero": "Pochero.HTML",
+            "pork adobo": "Pork_Adobo.HTML",
+            "pork chop steal": "Pork_Chop_Steak.html",
+            "pork menudo": "Pork_Menudo.html",
+            "pork sisig": "Pork_Sisig.html",
+            "Pritong hito": "Pritong_Hito.html",
+            "Puto bumbong": "Puto_Bumbong.html",
+            "puto": "Puto.html",
+
+            "Relyenong bangus": "Relyenong_Bangus.html",
+
+            "Saing con heilo": "Saging_Con_Hielo.html",
+            "sapin sapin": "Sapin_sapin.html",
+            "sinaing na tulingan": "Sinaing_na_Tulingan.HTML",
+            "sinangag": "Sinangag.HTML",
+            "sinigang na baboy": "Sinigang_na_Baboy.html",
+            "sinigang na bagnet": "Sinigang_na_Bagnet.html",
+            "sinigang na bangus": "Sinigang_na_Bangus.html",
+            "sinigang sa miso": "Sinigang_sa_Miso.html",
+
+            "suman sa lihiya": "Suman_sa_Lihiya.html",
+
+            "taho": "Taho.html",
+            "tamales": "Tamales.html",
+            "tambakol": "Tambakol.html",
+            "tapsilog": "Tapsilog.html",
+            "tinolang isda": "Tinolang_Isda.html",
+            "tinolang manok": "Tinolang_Manok.HTML",
+            "tokwa't baboy": "Tokwa't_Baboy.html",
+            "tortang talong": "Tortang_Talong.HTML",
+            "turon": "Turon.html",
+
+            "ube halaya": "Ube_Halaya.html",
+            "ukoy": "Ukoy.html",
+        };
+    
+        function searchRecipe() {
+            let input = document.getElementById("searchInput").value.toLowerCase().trim();
+           
+            const lowerCaseSearchItems = Object.keys(searchItems).reduce((acc, key) => {
+                acc[key.toLowerCase()] = searchItems[key];
+                return acc;
+            }, {});
+    
+            if (lowerCaseSearchItems[input]) {
+                window.location.href = lowerCaseSearchItems[input];
+            } else {
+                alert("No results found.");
+            }
+        }
+    
+        document.getElementById("searchButton").addEventListener("click", searchRecipe);
+        document.getElementById("searchInput").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                searchRecipe();
+            }
+        });
+    </script>
+</body>
+</html>

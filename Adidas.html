@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adidas Recipe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff3e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 10px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            max-width: 1000px;
+            width: 100%;
+            height: fit-content;
+        }
+        .top-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+        }
+        .image {
+            height: 250px;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            margin-left: 10%;
+        }
+        .recipes, .instructions {
+            padding: 20px;
+            margin-left: 40px;
+            margin-top: 20px;
+        }
+        h1 {
+            font-size: 1.8em;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.3em;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Adidas</h1>
+        
+        <div class="top-section">
+            <div class="image">
+            <img src="FFS_Pics/Adidas.jpg" alt="">
+            </div>
+            <div class="recipes">
+                <h2>Dish Recipes:</h2><br>
+            <ul>
+				<li>1 1/2 lbs. Chicken feet cleaned</li>
+                <li>2 tablespoons Oyster sauce</li>
+                <li>2 1/2 tablespoons Salted black beans tausi</li>
+                <li>2 tablespoons Mirin or 1/2 Teaspoon brown sugar</li>
+                <li>3 cloves Garlic chopped</li>
+                <li>1 piece Onion chopped</li>
+                <li>2 teaspoons Chili garlic oil</li>
+                <li>2 cups Water</li>
+                <li>1 1/2 cups Cooking oil</li>
+			</ul>
+            </div>
+        </div>
+        <div class="instructions">
+            <h2>Instructions:</h2><br>
+            <ol>
+               <li>Heat oil in a cooking pot. Fry chicken feet for 3 minutes per side. Remove and set aside.</li><br>
+                <li>Heat 3 tablespoons oil in a pressure cooker. Saute garlic and onion until onion softens.</li><br>
+                <li>Add chicken feet. Cook for 1 minute.</li><br>
+                <li>Add oyster sauce and water. Pressure cook for 18 minutes.</li><br>
+                <li>Pour mirin (or brown sugar) and add salted black beans. Continue cooking until the sauce reduces to half.</li><br>
+                <li>Add some chili garlic oil. Stir.</li><br>
+                <li>Transfer to a serving bowl. Serve and enjoy!</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
