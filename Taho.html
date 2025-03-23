@@ -16,7 +16,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: max-content;
             padding: 10px;
         }
         .container {
@@ -29,6 +29,7 @@
             background: #ffffff;
             max-width: 1000px;
             width: 100%;
+            height: max-content;
         }
         .top-section {
             display: grid;
@@ -44,6 +45,7 @@
             justify-content: center;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
             margin-left: 10%;
+            margin-top: 100px;
         }
         .recipes, .instructions {
             padding: 20px;
@@ -68,7 +70,7 @@
         
         <div class="top-section">
             <div class="image">
-            <img src="FFS_Pics/Taho.jpg" alt="Taho_image">
+            <img src="FFS_Pics/Taho.jpg" alt="Taho image" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="recipes">
                 <h2>Dish Recipes:</h2><br>
@@ -85,12 +87,14 @@
         <div class="instructions">
             <h2>Instructions:</h2><br>
             <ol>
-                <li>Pour 5 cups of water into a cooking pot and bring to a boil.</li>
-                <li>Add the sago pearls. Boil for 3 to 6 minutes. Reduce the heat to a low setting, and continue boiling for 5 to 10 minutes.</li>
-                <li>Drain the hot water by filtering the sago using a kitchen strainer. Put the sago pearls in a bowl with warm water and let it stay until needed.</li>
-                <li>Make the arnibal by boiling 3/4 cup water in a saucepan. Add the brown sugar. Stir. Add the vanilla extract. Turn the heat off. Set aside.</li>
-                <li>Transfer the extra soft tofu to a bowl. Microwave it for 2 1/2 minutes.</li>
-                <li>Arrange the soft tofu in individual cups. Top with sago pearls and pour arnibal (syrup) on top.</li>
+                <li>Pour 5 cups of water into a cooking pot and bring to a boil.</li><br>
+                <li>Add the sago pearls. Boil for 3 to 6 minutes. Reduce the heat to a low setting, and continue boiling for 5 to 10 minutes.</li><br>
+                <li>Drain the hot water by filtering the sago using a kitchen strainer. Put the sago pearls in a bowl with warm water 
+                    and let it stay until needed.</li><br>
+                <li>Make the arnibal by boiling 3/4 cup water in a saucepan. Add the brown sugar. Stir. 
+                    Add the vanilla extract. Turn the heat off. Set aside.</li><br>
+                <li>Transfer the extra soft tofu to a bowl. Microwave it for 2 1/2 minutes.</li><br>
+                <li>Arrange the soft tofu in individual cups. Top with sago pearls and pour arnibal (syrup) on top.</li><br>
                 <li>Serve warm. Share and Enjoy</li>
             </ol>
         </div>
