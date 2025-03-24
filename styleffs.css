@@ -28,7 +28,7 @@ header {
     padding-top: 3px;
     padding-bottom: 3px;
     gap: 10px;
-    justify-content:space-between;
+    justify-content:left;
     font-size: small;
 }
 
