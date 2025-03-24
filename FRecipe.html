@@ -16,18 +16,115 @@
             margin: 0;
             padding: 0;
         }
+
+        .burger-menu {
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .burger-menu .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+                position: relative; /* Make sure header is a positioning context */
+            }
+            
+            header h2 {
+                margin-right: 0;
+                text-align: center;
+                font-size: 1.5em;
+                margin-bottom: 10px;
+            }
+            
+            .logo {
+                margin-bottom: 10px;
+                max-width: 100px;
+            }
+            
+            .search-container {
+                width: 100%;
+                margin: 10px 0;
+                order: 3;
+            }
+            
+            nav {
+                width: 100%;
+                order: 2;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                padding: 0;
+            }
+          
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav ul li {
+                width: 100%;
+                text-align: center;
+                margin: 5px 0;
+            }
+            
+            #searchInput {
+                width: 70%;
+            }
+            
+            .burger-menu {
+                display: block;
+            }
+            
+            .burger-menu.active .bar:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+            
+            .burger-menu.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .burger-menu.active .bar:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+            
+            #suggestionsList {
+                width: 70%;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <img src="FFR no bg.png" alt="Filipino Food Recipe" class="logo">
-        <h2 style="margin-right: 20%; font-size: 2em">Kusina ng Bayan</h2>
+        <h2 style="font-size: 2em">Kusina ng Bayan</h2>
+        
+        <!-- Burger Menu Icon -->
+        <div class="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        
         <nav>
-            <b><ul>
+            <ul>
                 <li><a href="HomeFFS.HTML">Home</a></li>
                 <li><a href="FRecipe.html" target="recipeFrame">Recipe</a></li>
                 <li><a href="AboutFFSNew.HTML">About</a></li>
-            </b></ul>
+            </ul>
         </nav>
 
         <div class="search-container">
@@ -39,13 +136,13 @@
 
     <div class="iframe-container">
         <iframe id="recipeFrame" src="FRecipeGallery.html"></iframe>
-        </div>
+    </div>
 
     <div class="footer" style="margin-top: 0px;">
         <img src="FFR no bg.png" alt="Logo" class="logo"> 
         <p><b>© All Rights Reserved</b></p>
     </div>
-
+    
     <script>
         const searchItems = {
             "adidas": "Adidas.html",
@@ -169,57 +266,81 @@
         };
     
         function updateSuggestions() {
-        let input = document.getElementById("searchInput").value.toLowerCase().trim();
-        let suggestionsList = document.getElementById("suggestionsList");
+            let input = document.getElementById("searchInput").value.toLowerCase().trim();
+            let suggestionsList = document.getElementById("suggestionsList");
 
-        
-        suggestionsList.innerHTML = '';
-        suggestionsList.style.display = 'none'; 
+            suggestionsList.innerHTML = '';
+            suggestionsList.style.display = 'none'; 
 
-        if (input.length === 0) return;
+            if (input.length === 0) return;
 
-        
-        let filtered = Object.keys(searchItems).filter(item => item.includes(input));
+            let filtered = Object.keys(searchItems).filter(item => item.includes(input));
 
-        if (filtered.length === 0) return;
+            if (filtered.length === 0) return;
 
-        filtered.forEach(item => {
-            let listItem = document.createElement("li");
-            listItem.textContent = item;
-            listItem.addEventListener("click", () => {
-                document.getElementById("searchInput").value = item;
-                suggestionsList.style.display = 'none'; 
-                searchRecipe(); 
+            filtered.forEach(item => {
+                let listItem = document.createElement("li");
+                listItem.textContent = item;
+                listItem.addEventListener("click", () => {
+                    document.getElementById("searchInput").value = item;
+                    suggestionsList.style.display = 'none'; 
+                    searchRecipe(); 
+                });
+                suggestionsList.appendChild(listItem);
             });
-            suggestionsList.appendChild(listItem);
+
+            suggestionsList.style.display = 'block'; 
+        }
+
+        function searchRecipe() {
+            let input = document.getElementById("searchInput").value.toLowerCase().trim();
+
+            if (searchItems[input]) {
+                document.getElementById("recipeFrame").src = searchItems[input];
+            } else {
+                alert("No results found.");
+            }
+        }
+
+        // Burger menu toggle functionality
+        document.querySelector('.burger-menu').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('nav ul').classList.toggle('active');
         });
 
-        suggestionsList.style.display = 'block'; 
-    }
+        // Close navigation menu when clicking a link
+        document.querySelectorAll('nav ul li a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.querySelector('.burger-menu').classList.remove('active');
+                document.querySelector('nav ul').classList.remove('active');
+            });
+        });
 
-    function searchRecipe() {
-        let input = document.getElementById("searchInput").value.toLowerCase().trim();
+        document.getElementById("searchInput").addEventListener("input", updateSuggestions);
+        document.getElementById("searchButton").addEventListener("click", searchRecipe);
+        document.getElementById("searchInput").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                searchRecipe();
+            }
+        });
 
-        if (searchItems[input]) {
-            document.getElementById("recipeFrame").src = searchItems[input];
-        } else {
-            alert("No results found.");
-        }
-    }
+        document.addEventListener("click", function(event) {
+            if (!document.querySelector(".search-container").contains(event.target)) {
+                document.getElementById("suggestionsList").style.display = 'none';
+            }
+        });
 
-
-    document.getElementById("searchInput").addEventListener("input", updateSuggestions);
-    document.getElementById("searchButton").addEventListener("click", searchRecipe);
-    document.getElementById("searchInput").addEventListener("keypress", function(event) {
-        if (event.key === "Enter") {
-            searchRecipe();
-        }
-    });
-
-    document.addEventListener("click", function(event) {
-        if (!document.querySelector(".search-container").contains(event.target)) {
-            document.getElementById("suggestionsList").style.display = 'none';
-        }
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const burgerMenu = document.querySelector('.burger-menu');
+            const navMenu = document.querySelector('nav ul');
+            
+            if (burgerMenu.classList.contains('active') && 
+                !burgerMenu.contains(event.target) && 
+                !navMenu.contains(event.target)) {
+                burgerMenu.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
         });
     </script>
 </body>
