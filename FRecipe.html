@@ -8,7 +8,7 @@
     <style>
         iframe {
             width: 100%;
-            height: 600px; /* Adjust height as needed*/ 
+            height: 600px; 
             border: none;
             display: block;
         }
@@ -38,7 +38,7 @@
             header {
                 flex-direction: column;
                 padding: 10px;
-                position: relative; /* Make sure header is a positioning context */
+                position: relative; 
             }
             
             header h2 {
@@ -121,7 +121,7 @@
         
         <nav>
             <ul>
-                <li><a href="HomeFFS.HTML">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="FRecipe.html" target="recipeFrame">Recipe</a></li>
                 <li><a href="AboutFFSNew.HTML">About</a></li>
             </ul>
@@ -302,13 +302,13 @@
             }
         }
 
-        // Burger menu toggle functionality
+        
         document.querySelector('.burger-menu').addEventListener('click', function() {
             this.classList.toggle('active');
             document.querySelector('nav ul').classList.toggle('active');
         });
 
-        // Close navigation menu when clicking a link
+        
         document.querySelectorAll('nav ul li a').forEach(item => {
             item.addEventListener('click', () => {
                 document.querySelector('.burger-menu').classList.remove('active');
@@ -330,7 +330,7 @@
             }
         });
 
-        // Close menu when clicking outside
+        
         document.addEventListener('click', function(event) {
             const burgerMenu = document.querySelector('.burger-menu');
             const navMenu = document.querySelector('nav ul');

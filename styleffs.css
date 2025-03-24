@@ -30,6 +30,7 @@ header {
     gap: 10px;
     justify-content:left;
     font-size: small;
+    margin-right: 0;
 }
 
         nav {
