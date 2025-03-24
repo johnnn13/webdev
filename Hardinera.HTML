@@ -62,6 +62,65 @@
             list-style-type: disc;
             padding-left: 20px;
         }
+        @media screen and (max-width: 768px) {
+            .top-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .image {
+                height: 200px;
+                margin: 0 auto;
+                width: 90%;
+            }
+            
+            .recipes, .instructions {
+                margin-left: 0;
+                padding: 15px 10px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+            }
+            
+            h2 {
+                font-size: 1.2em;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .logo {
+                height: 30px;
+            }
+            
+            header h1 {
+                font-size: 1.4em !important;
+            }
+            
+            .image {
+                height: 180px;
+            }
+            
+            h1 {
+                font-size: 1.3em;
+            }
+            
+            h2 {
+                font-size: 1.1em;
+            }
+            
+            .recipes, .instructions {
+                padding: 10px 5px;
+            }
+            
+            ul, ol {
+                padding-left: 15px;
+                font-size: 13px;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            
+            footer {
+                font-size: 0.9em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -100,7 +159,7 @@
         <div class="instructions">
             <h2>Instructions:</h2><br>
             <ol>
-                <li>In a cooking pot, add cooking oil and sautÃ© garlic and onions.</li><br>
+                <li>In a cooking pot, add cooking oil and sautee garlic and onions.</li><br>
                 <li>Add the diced pork and cook for 3 to 5 minutes.</li><br>
                 <li>Put-in the beef cube, water, and tomato sauce then bring to a boil. 
                     Simmer until the pork is tender and the liquid completely evaporates. Set aside and let cool.</li><br>
