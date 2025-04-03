@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ginataang Alimasag Recipe</title>
     <style>
         * {
@@ -12,11 +12,12 @@
         }
         body {
             font-family: Arial, sans-serif;
+            font-size: large;
             background: #fff3e0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: max-content;
             padding: 10px;
         }
         .container {
@@ -29,6 +30,7 @@
             background: #ffffff;
             max-width: 1000px;
             width: 100%;
+            height: max-content;
         }
         .top-section {
             display: grid;
@@ -44,8 +46,6 @@
             justify-content: center;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
             margin-left: 10%;
-            margin-top: auto;
-
         }
         .recipes, .instructions {
             padding: 20px;
@@ -107,10 +107,6 @@
                 font-size: 1.1em;
             }
             
-            .recipes, .instructions {
-                padding: 10px 5px;
-            }
-            
             ul, ol {
                 padding-left: 15px;
                 font-size: 13px;
@@ -129,40 +125,84 @@
         
         <div class="top-section">
             <div class="image">
-            <img src="FFS_Pics/Ginataang_Alimasag" alt="Ginataang_Alimasag image">
+            <img src="FFS_Pics/Ginataang_Alimasag" alt="Ginataang_Alimasag image" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="recipes">
+                <dl>
+                    <dt style="font-size: larger;"><b>Dish Description:</b></dt><br>
+                    <dd style="font-size: large; text-align: justify;">Ginataang Alimasag are Crabs cooked in Coconut Milk. This recipe features the use of spinach and Thai chili as a replacement for Malunggay. Squash and string beans (kalabasa and sitaw) can also be placed instead of Spinach (or Malunggay).</dd>
+                </dl>
+                </div>
+            </div>
+            <div class="instructions">
                 <h2>Dish Recipes:</h2><br>
-            <ul>
-				<li>3 lbs blue crabs Alimasag</li>
-                <li>2 tbsp shrimp paste</li>
-                <li>1 tbsp fish sauce</li>
-                <li>1 tsp garlic minced</li>
-                <li>1 piece onion minced</li>
-                <li>1 thumb ginger cut into thin strips</li>
-                <li>3 tbsp cooking oil</li>
-                <li>4 cups coconut milk</li>
-                <li>1/2 tsp ground black pepper</li>
-                <li>1 bunch fresh spinach</li>
-                <li>6 pieces Thai chili</li>
-			</ul>
+                <ul>
+                    <li>3 lbs blue crabs (Alimasag)</li>
+                    <li>2 tbsp shrimp paste</li>
+                    <li>1 tbsp fish sauce</li>
+                    <li>1 tsp garlic minced</li>
+                    <li>1 piece onion minced</li>
+                    <li>1 thumb ginger cut into thin strips</li>
+                    <li>3 tbsp cooking oil</li>
+                    <li>4 cups coconut milk</li>
+                    <li>½ tsp ground black pepper</li>
+                    <li>1 bunch fresh spinach</li>
+                    <li>6 pieces Thai chili</li>
+                </ul>
+                
+                <br><br>
+                
+                <h2>Instructions:</h2><br>
+                <ol>
+                    <li>In a large pot, sauté the garlic, onion, and ginger.</li><br>
+                    <li>Add the ground black pepper and coconut milk, then bring to a boil.</li><br>
+                    <li>Put in the shrimp paste and fish sauce, and cook until the coconut milk’s texture thickens and natural oil comes out of it (approximately 20 minutes).</li><br>
+                    <li>Add the Thai chili and simmer for 5 minutes.</li><br>
+                    <li>Put the crabs in the pot and mix until evenly covered with coconut milk. Simmer for 5 to 20 minutes. (Note: If the crabs were steamed before cooking, 5 to 8 minutes is enough.)</li><br>
+                    <li>Add the spinach and simmer for 5 minutes.</li><br>
+                    <li>Serve hot. Share and enjoy!</li>
+                </ol><br><br><br>
+                <p>Source: <a href="https://panlasangpinoy.com/ginataang-alimasag/">https://panlasangpinoy.com/ginataang-alimasag/ </a></p>
             </div>
         </div>
-        <div class="instructions">
-            <h2>Instructions:</h2><br>
-            <ol>
-                <li>In a large pot, sauté the garlic, onion, and ginger</li>
-                <li>Add the ground black pepper and coconut milk then bring to a boil</li>
-                <li>Put in the shrimp paste and fish sauce and cook until the coconut milk's texture is thick and natural oil comes out of it (approximately 20 ++ minutes)</li>
-                <li>Add the Thai chili and simmer for 5 minutes</li>
-                <li>Put the crabs in the pot and mix until evenly covered with coconut milk. Simmer for 5 to 20 minutes. (Note: If crabs were steamed before cooking, 5 to 8 minutes is enough)</li>
-                <li>Add the spinach and simmer for 5 minutes</li>
-                <li>Serve hot. Share and Enjoy!</li>
-            </ol><br><br><br>
-            <p>Source: <a href=" https://panlasangpinoy.com/ginataang-alimasag/
-                "> https://panlasangpinoy.com/ginataang-alimasag/
-            </a></p>
-        </div>
-    </div>
-</body>
-</html>
+    
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
