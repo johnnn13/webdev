@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tinolang Isda Recipe</title>
     <style>
@@ -12,6 +11,7 @@
         }
         body {
             font-family: Arial, sans-serif;
+            font-size: large;
             background: #fff3e0;
             display: flex;
             justify-content: center;
@@ -45,7 +45,6 @@
             justify-content: center;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
             margin-left: 10%;
-            margin-top: auto;
         }
         .recipes, .instructions {
             padding: 20px;
@@ -107,10 +106,6 @@
                 font-size: 1.1em;
             }
             
-            .recipes, .instructions {
-                padding: 10px 5px;
-            }
-            
             ul, ol {
                 padding-left: 15px;
                 font-size: 13px;
@@ -129,38 +124,85 @@
         
         <div class="top-section">
             <div class="image">
-                <img src= "FFS_Pics/Tinolang_Isda.jpg" alt="Tinolang_Isda_image" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="FFS_Pics/Tinolang_Isda.jpg" alt="Tinolang Isda image" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="recipes">
+                <dl>
+                    <dt style="font-size: larger;"><b>Dish Description:</b></dt><br>
+                <dd style="font-size: large; text-align: justify;">A light and comforting Filipino fish soup made by simmering fresh fish in a ginger-based broth with tomatoes, onions, and leafy greens like malunggay or pechay. The mild, slightly peppery flavor of the broth enhances the delicate taste of the fish, making it a soothing and nourishing dish often enjoyed with steamed rice.</dd>
+                </dl>
+                </div>
+            </div>
+            <div class="instructions">
                 <h2>Dish Recipes:</h2><br>
-            <ul>
-				<li>2 lbs. Tuna jaw (panga)</li>
-                <li>1 to 2 cups Hot pepper leaves (dahon ng sili)</li>
-                <li>1 Bunch of scallions, sliced in 3-inch pieces (dahon ng sibuyas)</li>
-                <li>2 Plum tomatoes, sliced in wedges (optional)</li>
-                <li>3 to 5 pieces Long green pepper (siling pansigang)</li>
-                <li>1 Medium yellow onion, sliced</li>
-                <li>3 thumbs Ginger, peeled and sliced into pieces</li>
-                <li>1 Stalk lemongrass</li>
-                <li>1 piece Knorr Fish Bouillon (fish cube)</li>
-                <li>5 cups Water</li>
-                <li>3 tablespoons Fish sauce</li>
-			</ul>
+                <ul>
+                    <li>2 lbs. Tuna jaw (panga)</li>
+                    <li>1 to 2 cups Hot pepper leaves (dahon ng sili)</li>
+                    <li>1 Bunch of scallions, sliced in 3-inch pieces (dahon ng sibuyas)</li>
+                    <li>2 Plum tomatoes, sliced in wedges (optional)</li>
+                    <li>3 to 5 pieces Long green pepper (siling pansigang)</li>
+                    <li>1 Medium yellow onion, sliced</li>
+                    <li>3 thumbs Ginger, peeled and sliced into pieces</li>
+                    <li>1 Stalk lemongrass</li>
+                    <li>1 piece Knorr Fish Bouillon (fish cube)</li>
+                    <li>5 cups Water</li>
+                    <li>3 tablespoons Fish sauce</li>
+                </ul>
+                <br>
+                <br>
+                <br>
+                <h2>Instructions:</h2><br>
+                <ol>
+                    <li>Pour water into a soup pot. Let boil.</li><br>
+                    <li>Add ginger, tomato, and onion. Let the water reboil.</li><br>
+                    <li>Add in the lemongrass. Cover and boil for 5 to 8 minutes.</li><br>
+                    <li>Gently slide in the Tuna. Cover and cook for 12 to 15 minutes.</li><br>
+                    <li>Add the fish cube and then stir. Cover and continue to cook between low to medium heat for 2 minutes.</li><br>
+                    <li>Add the hot pepper leaves, scallions, long green pepper, and fish sauce. Stir and cook for 3 minutes.</li><br>
+                    <li>Transfer to a serving plate. Serve with rice.</li><br>
+                    <li>Share and enjoy!</li>
+                </ol><br><br><br>
+                <p>Source: <a href="https://panlasangpinoy.com/tinolang-isda/">https://panlasangpinoy.com/tinolang-isda/</a></p>
             </div>
         </div>
-        <div class="instructions">
-            <h2>Instructions:</h2><br>
-            <ol>
-                <li>Pour water into a soup pot. Let boil.</li><br>
-                <li>Add ginger, tomato, and onion. Let the water reboil.</li><br>
-                <li>Add in the lemongrass. Cover and boil for 5 to 8 minutes.</li><br>
-                <li>Gently slide in the Tuna. Cover and cook for 12 to 15 minutes.</li><br>
-                <li>Add the fish cube and then stir. Cover and continue to cook between low to medium heat for 2 minutes.</li><br>
-                <li>Add the hot pepper leaves, scallions, long green pepper, and fish sauce. Stir and cook for 3 minutes.</li><br>
-                <li>Transfer to a serving plate. Serve with rice.</li><br>
-                <li>Share and enjoy!</li>
-            </ol>
-        </div>
-    </div>
-</body>
-</html>
+    
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saging con Hielo Recipe</title>
     <style>
@@ -12,6 +11,7 @@
         }
         body {
             font-family: Arial, sans-serif;
+            font-size: large;
             background: #fff3e0;
             display: flex;
             justify-content: center;
@@ -45,7 +45,6 @@
             justify-content: center;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
             margin-left: 10%;
-            margin-top: auto;
         }
         .recipes, .instructions {
             padding: 20px;
@@ -107,10 +106,6 @@
                 font-size: 1.1em;
             }
             
-            .recipes, .instructions {
-                padding: 10px 5px;
-            }
-            
             ul, ol {
                 padding-left: 15px;
                 font-size: 13px;
@@ -132,30 +127,77 @@
             <img src="FFS_Pics/Saging_con_Hielo.jpg" alt="Saging con Hielo image" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="recipes">
+                <dl>
+                    <dt style="font-size: larger;"><b>Dish Description:</b></dt><br>
+                <dd style="font-size: large; text-align: justify;">Filipino dessert made with sweet, ripe saba bananas, shaved ice, and condensed milk. Topped with a generous drizzle of syrup and sometimes paired with sweet corn or tapioca pearls, this cold treat is a perfect balance of creamy, sweet, and slightly fruity flavors, making it a popular choice on hot days.</dd>
+                </dl>
+                </div>
+            </div>
+            <div class="instructions">
                 <h2>Dish Recipes:</h2><br>
-            <ul>
-				<li>4 to 6 pieces ripe saba banana</li>
-                <li>3/4 cup brown sugar</li>
-                <li>1 1/2 cups water</li>
-                <li>1 teaspoon vanilla extract or vanilla essence</li>
-                <li>1/4 teaspoon salt</li>
-                <li>1 1/2 cups shaved ice</li>
-                <li>1/4 cup evaporated milk</li>
-            </ul>
+                <ul>
+                    <li>4 to 6 pieces ripe saba banana</li>
+                    <li>3/4 cup brown sugar</li>
+                    <li>1 1/2 cups water</li>
+                    <li>1 teaspoon vanilla extract or vanilla essence</li>
+                    <li>1/4 teaspoon salt</li>
+                    <li>1 1/2 cups shaved ice</li>
+                    <li>1/4 cup evaporated milk</li>
+                </ul>
+                <br>
+                <br>
+                <br>
+                <h2>Instructions:</h2><br>
+                <ol>
+                    <li>Pour-in the water in a cooking pot. Let boil.</li><br>
+                    <li>Put-in the brown sugar. Stir.</li><br>
+                    <li>Add the vanilla extract (or essence) and salt. Stir once more. Cook for 1 minute.</li><br>
+                    <li>Add the saba banana. Cover the cooking pot. Adjust the heat to low and cook for 10 to 15 minutes. 
+                        Let the liquid reduce to half. Turn-off the heat and allow the banana to cool.</li><br>
+                    <li>Transfer to a serving bowl. Top with shaved ice and pour evaporated milk.</li><br>
+                    <li>Serve. Share and enjoy!</li>
+                </ol><br><br><br>
+                <p>Source: <a href="https://panlasangpinoy.com/saging-con-hielo-recipe/">https://panlasangpinoy.com/saging-con-hielo-recipe/</a></p>
             </div>
         </div>
-        <div class="instructions">
-            <h2>Instructions:</h2><br>
-            <ol>
-                <li>Pour-in the water in a cooking pot. Let boil.</li><br>
-                <li>Put-in the brown sugar. Stir.</li><br>
-                <li>Add the vanilla extract (or essence) and salt. Stir once more. Cook for 1 minute.</li><br>
-                <li>Add the saba banana. Cover the cooking pot. Adjust the heat to low and cook for 10 to 15 minutes. 
-                    Let the liquid reduce to half. Turn-off the heat and allow the banana to cool.</li><br>
-                <li>Transfer to a serving bowl. Top with shaved ice and pour evaporated milk.</li><br>
-                <li>Serve. Share and enjoy!</li>
-            </ol>
-        </div>
-    </div>
-</body>
-</html>
+    
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

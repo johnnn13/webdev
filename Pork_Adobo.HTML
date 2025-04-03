@@ -1,8 +1,6 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pork Adobo Recipe</title>
     <style>
@@ -13,6 +11,7 @@
         }
         body {
             font-family: Arial, sans-serif;
+            font-size: large;
             background: #fff3e0;
             display: flex;
             justify-content: center;
@@ -46,7 +45,6 @@
             justify-content: center;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
             margin-left: 10%;
-            margin-top: auto;
         }
         .recipes, .instructions {
             padding: 20px;
@@ -108,10 +106,6 @@
                 font-size: 1.1em;
             }
             
-            .recipes, .instructions {
-                padding: 10px 5px;
-            }
-            
             ul, ol {
                 padding-left: 15px;
                 font-size: 13px;
@@ -130,34 +124,81 @@
         
         <div class="top-section">
             <div class="image">
-                <img src="FFS_Pics/Pork_Adobo.jpg" alt="Pork Adobo image" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="FFS_Pics/Pork_Adobo.jpg" alt="Pork Adobo image" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="recipes">
+                <dl>
+                    <dt style="font-size: larger;"><b>Dish Description:</b></dt><br>
+                <dd style="font-size: large; text-align: justify;">Adobo is a signature Filipino dish, widely regarded as a comfort food staple. It consists of meat, usually chicken or pork, braised in a savory and tangy blend of soy sauce, vinegar, garlic, and spices. The slow-cooking process enhances its deep, umami-rich flavor, resulting in tender, flavorful meat with a distinct balance of saltiness and acidity.</dd>
+                </dl>
+                </div>
+            </div>
+            <div class="instructions">
                 <h2>Dish Recipes:</h2><br>
-            <ul>
-				<li>2 lbs pork belly</li>
-                <li>2 tablespoons garlic</li>
-                <li>5 dried bay leaves</li>
-                <li>4 tablespoons vinegar</li>
-                <li>1/2 cup soy sauce</li>
-                <li>1 tablespoon peppercorn</li>
-                <li>2 cups water</li>
-                <li>Salt to taste</li>
-            </ul>
+                <ul>
+                    <li>2 lbs pork belly</li>
+                    <li>2 tablespoons garlic</li>
+                    <li>5 dried bay leaves</li>
+                    <li>4 tablespoons vinegar</li>
+                    <li>1/2 cup soy sauce</li>
+                    <li>1 tablespoon peppercorn</li>
+                    <li>2 cups water</li>
+                    <li>Salt to taste</li>
+                </ul>
+                <br>
+                <br>
+                <br>
+                <h2>Instructions:</h2><br>
+                <ol>
+                    <li>Combine the pork belly, soy sauce, and garlic then marinate for at least 1 hour.</li><br>
+                    <li>Heat the pot and put in the marinated pork belly then cook for a few minutes.</li><br>
+                    <li>Pour remaining marinade including garlic.</li><br>
+                    <li>Add water, whole peppercorn, and dried bay leaves then bring to a boil. Simmer for 40 minutes to 1 hour.</li><br>
+                    <li>Put in the vinegar and simmer for 12 to 15 minutes.</li><br>
+                    <li>Add salt to taste.</li><br>
+                    <li>Serve hot. Share and enjoy!</li>
+                </ol><br><br><br>
+                <p>Source: <a href="https://panlasangpinoy.com/filipino-food-pork-adobo-recipe/">https://panlasangpinoy.com/filipino-food-pork-adobo-recipe/</a></p>
             </div>
         </div>
-        <div class="instructions">
-            <h2>Instructions:</h2><br>
-            <ol>
-                <li>Combine the pork belly, soy sauce, and garlic then marinate for at least 1 hour.</li><br>
-                <li>Heat the pot and put in the marinated pork belly then cook for a few minutes.</li><br>
-                <li>Pour remaining marinade including garlic.</li><br>
-                <li>Add water, whole peppercorn, and dried bay leaves then bring to a boil. Simmer for 40 minutes to 1 hour.</li><br>
-                <li>Put in the vinegar and simmer for 12 to 15 minutes.</li><br>
-                <li>Add salt to taste.</li><br>
-                <li>Serve hot. Share and enjoy!</li>
-            </ol>
-        </div>
-    </div>
-</body>
-</html>
+    
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
