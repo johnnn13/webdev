@@ -34,87 +34,37 @@
             justify-content: center;
             margin: 50px;
         }
-        
-        nav ul li a {
-            text-decoration: none;
-            padding: 5px;
-            
-        }
-        
-        @media screen and (max-width: 768px) {
-            header {
-                padding: 10px;
-            }
-            
-            .logo {
-                max-height: 40px;
-            }
-            
-            header h1 {
-                font-size: 1.5em;
-            }
-            
-            nav {
-                width: 100%;
-                display: flex;
-                justify-content: flex-end;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                align-items: flex-end;
-            }
-            
-            nav ul li {
-                margin: 5px 0;
-                text-align: right;
-            }
-            
-            nav ul li a {
-                padding: 8px 0;
-            }
-        }
-        
-        @media screen and (max-width: 480px) {
-            
-            .logo {
-                margin-bottom: 5px;
-            }
-            
-            header h1 {
-                font-size: 1.2em;
-            }
 
-        /* bagong code */
-        .footer {
-            margin-top: 20px;
-            text-align: center;
+        .food-card {
+            background-image: linear-gradient(to right, #ffffff, #c2bfbf);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 1000px;
+            text-align: justify;
         }
+        
+        .accept-button {
+      display: block;
+      margin-left: auto;
+      padding: 10px 10px;
+      font-size: 16px;
+      background-color: orange;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      align-items: left;
+    }
 
-        .disclaimer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: smaller;
-            padding: 10px;
-        }
-        }
+    .accept-button:hover {
+      background-color: red;
+      color: yellow;
+    }
+
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="header-left">
-            <img src="FFR no bg.png" alt="Filipino Food Recipe" class="logo"> 
-            <h1>Kusina ng Bayan</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.HTML">Home</a></li>
-                <li><a href="FRecipe.html">Recipe</a></li>
-                <li><a href="AboutFFSNew.HTML">About</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <div>
         <div class="food-container">
             <div class="food-card" style="background-image: linear-gradient(to right,#e5d05f, #e4dc24, #e5d05f); ">
