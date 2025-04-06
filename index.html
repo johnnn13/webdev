@@ -3,160 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="styleffs.css">
+    <title>Terms and Conditions</title>
     <style>
-        .header {
+        
+        body {
+            font-family: cursive;
+            margin: 0;
+            padding: 0; 
+            background: url(FFS_Pics/FFS_Background.jpg); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center;
+}
+
+        body::after {
+            content: "";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5); 
+            z-index: -1;
+        }
+
+        .food-container {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
             flex-wrap: wrap;
-        } 
-        
-        .header-left {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo {
-            max-height: 60px;
-            width: auto;
-            margin-right: 15px;
-        }
-        
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-        
-        nav {
-            flex-shrink: 0;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            justify-content: flex-end;
-        }
-        
-        nav ul li {
-            margin: 0 10px;
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            padding: 5px;
-            
-        }
-        
-        @media screen and (max-width: 768px) {
-            header {
-                padding: 10px;
-            }
-            
-            .logo {
-                max-height: 40px;
-            }
-            
-            header h1 {
-                font-size: 1.5em;
-            }
-            
-            nav {
-                width: 100%;
-                display: flex;
-                justify-content: flex-end;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                align-items: flex-end;
-            }
-            
-            nav ul li {
-                margin: 5px 0;
-                text-align: right;
-            }
-            
-            nav ul li a {
-                padding: 8px 0;
-            }
-        }
-        
-        @media screen and (max-width: 480px) {
-            
-            .logo {
-                margin-bottom: 5px;
-            }
-            
-            header h1 {
-                font-size: 1.2em;
-            }
-
-        /* bagong code */
-        .footer {
-            margin-top: 20px;
-            text-align: center;
+            justify-content: center;
+            margin: 50px;
         }
 
-        .disclaimer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: smaller;
-            padding: 10px;
+        .food-card {
+            background-image: linear-gradient(to right, #ffffff, #c2bfbf);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 1000px;
+            text-align: justify;
         }
-        }
+        
+        .accept-button {
+      display: block;
+      margin-left: auto;
+      padding: 10px 10px;
+      font-size: 16px;
+      background-color: orange;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      align-items: left;
+    }
+
+    .accept-button:hover {
+      background-color: red;
+      color: yellow;
+    }
+
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="header-left">
-            <img src="FFR no bg.png" alt="Filipino Food Recipe" class="logo"> 
-            <h1>Kusina ng Bayan</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.HTML">Home</a></li>
-                <li><a href="FRecipe.html">Recipe</a></li>
-                <li><a href="AboutFFSNew.HTML">About</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <div>
         <div class="food-container">
             <div class="food-card" style="background-image: linear-gradient(to right,#e5d05f, #e4dc24, #e5d05f); ">
             
-            <h2 style="font-size: 5em; text-decoration: none; font-family:Georgia, 'Times New Roman', Times, serif;">Welcome to Kusina ng Bayan!</h2> 
-                <div style="font-size: smaller; background-color: white; border-radius: 5%; padding: 3em;">
-                <p>Kusina ng Bayan have hidden gems like kare-kare. Where every recipe is presented with clear instructions, precise measurements, and handy tips for guaranteed success. And that's not all, we've made sure to include a complete list of ingredients for each recipe sourced from both local markets and international suppliers making it a breeze for you to gather everything you need. Whether you're a seasoned home cook or just starting out, our user-friendly website design makes finding the perfect recipe for any occasion a piece of cake. So, let's roll up our sleeves, sharpen our knives, and embark on an exciting culinary journey through the flavors of the Philippines together.</p>
+            <h2 style="font-size: 2.5em; text-decoration: none; font-family:Georgia, 'Times New Roman', Times, serif; text-align: center;">Terms and Conditions</h2> 
+                <div style="font-size: smaller; background-color: white; padding: 3em;">
+                    <p><strong>Effective Date:</strong> 2024-2025</p>
+                  
+                    <p>Welcome to <strong>Kusina ng Bayan</strong>! This website is created solely for academic purposes and is intended to serve as a showcase for Filipino food recipes in an educational context. By using this site, you agree to the following terms and conditions:</p>
+                  
+                    <section>
+                      <h2>1. Academic Use Only</h2>
+                      <p>This website is not intended for commercial use. All content is developed as part of a school, college, or university project by a group of five students and exists only to demonstrate their skills and knowledge in web development, design, or related academic fields.</p>
+                    </section>
+                  
+                    <section>
+                      <h2>2. Content Disclaimer</h2>
+                      <p>The recipes, articles, and images provided are either original, publicly available, or adapted from online sources with proper attribution where applicable. They are intended for educational display only.</p>
+                    </section>
+                  
+                    <section>
+                      <h2>3. Intellectual Property</h2>
+                      <p>All original content (text, design, and layout) belongs to the project group members. Any third-party content used is credited appropriately. If you believe any content violates copyright laws, please contact us immediately for review and potential removal.</p>
+                    </section>
+
+                    <section>
+                      <h2>4. No Data Collection</h2>
+                      <p>This website does not collect, store, or share any user data. Any forms or interactions present are for visual demonstration only.</p>
+                    </section>
+                  
+                    <section>
+                      <h2>5. Changes to Terms</h2>
+                      <p>These terms and conditions may be updated as the academic project evolves. We recommend reviewing this page periodically for any changes.</p>
+                    </section>
+                  
+                    <section>
+                      <h2>6. Contact</h2>
+                      <p>For academic inquiries or content concerns, please contact any of the group members:<br><br>
+                      <strong>Member 1:</strong> John Bation<br>
+                      <strong>Member 2:</strong> Irvynne Aquino<br>
+                      <strong>Member 3:</strong> Richmond Pinca<br>
+                      <strong>Member 4:</strong> Joshua Pineda<br>
+                      <strong>Member 5:</strong> Aleya Joy Radam<br><br>
+                      <strong>Universiy of Caloocan City</strong></p><br><br>
+                    </section>
+
+                    <button class="accept-button" onclick="window.location.href='HomeFFR.html'">Accept</button>
+                  
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- bagong code -->
-    <div class="disclaimer">
-        <h2>DISCLAIMER</h2>
-        <p>By accessing and using this website, you agree to the following terms and conditions. All content provided, including educational materials and resources, 
-            is intended for informational and educational purposes only. We do not make any representations or warranties regarding the accuracy, reliability, or 
-            completeness of the information. We are not responsible for any loss, damage, or injury resulting from the use of this website or its contents. 
-            Please use the information with caution and at your own discretion.</p>
-        <p>Share this page to:</p>
-        <div>
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Link</a>
-        </div>
-
-    <div class="footer" style="margin-top: 0px;">
-        <p><b>© All Rights Reserved</b></p>
-    </div>
-
-    
-
 </body>
 </html>
