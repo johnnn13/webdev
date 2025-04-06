@@ -68,9 +68,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 15px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 10px 20px;
         }
         
         .header-left {
@@ -83,8 +81,13 @@
             margin-right: 15px;
         }
         
-        .header h2 {
+        .header h1 {
             margin: 0;
+            font-size: 2em;
+        }
+        
+        nav {
+            flex-shrink: 0;
         }
         
         nav ul {
@@ -95,12 +98,12 @@
         }
         
         nav ul li {
-            margin: 0 15px;
+            margin: 0 10px;
         }
         
         nav ul li a {
             text-decoration: none;
-            color: #333;
+            padding: 5px;
         }
          
         @media screen and (max-width: 768px) {
@@ -182,14 +185,14 @@
     <header class="header">
         <div class="header-left">
             <img src="FFR no bg.png" alt="Filipino Food Recipe" class="logo">
-            <h2>Kusina ng Bayan</h2>
+            <h1>Kusina ng Bayan</h1>
         </div>
         <nav id="mobile-menu">
-            <b><ul>
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="FRecipe.html">Recipe</a></li>
                 <li><a href="AboutFFSNew.HTML">About</a></li>
-            </b></ul>
+            </ul>
         </nav>
     </header>
     

@@ -6,6 +6,52 @@
     <title>Recipes</title>
     <link rel="stylesheet" href="styleffs.css">
     <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            flex-wrap: wrap;
+        } 
+        
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .logo {
+            max-height: 60px;
+            width: auto;
+            margin-right: 15px;
+        }
+
+        nav {
+            flex-shrink: 0;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            justify-content: flex-end;
+        }
+        
+        nav ul li {
+            margin: 0 10px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            padding: 5px;
+            
+        }
+        
         iframe {
             width: 100%;
             height: 600px; 
@@ -35,10 +81,21 @@
         }
 
         @media screen and (max-width: 768px) {
-            header {
+            .header {
+                flex-direction: column;
+                padding: 10px 0px;
+                position: relative; 
+                justify-content: baseline;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+            
+            .header-left {
+                display: flex;
                 flex-direction: column;
                 padding: 10px;
-                position: relative; 
+                position: relative;
+                align-items: center;
             }
             
             header h2 {
@@ -51,6 +108,7 @@
             .logo {
                 margin-bottom: 10px;
                 max-width: 100px;
+                margin-right: 0px;
             }
             
             .search-container {
@@ -108,10 +166,11 @@
     </style>
 </head>
 <body>
-    <header>
+    <header class="header">
+    <div class="header-left">
         <img src="FFR no bg.png" alt="Filipino Food Recipe" class="logo">
-        <h2 style="font-size: 2em">Kusina ng Bayan</h2>
-        
+        <h1>Kusina ng Bayan</h1>
+    </div>
         <div class="burger-menu">
             <div class="bar"></div>
             <div class="bar"></div>
