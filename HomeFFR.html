@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styleffs.css">
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            flex-wrap: wrap;
+        } 
+        
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            max-height: 60px;
+            width: auto;
+            margin-right: 15px;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        
+        nav {
+            flex-shrink: 0;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            justify-content: flex-end;
+        }
+        
+        nav ul li {
+            margin: 0 10px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            padding: 5px;
+            display: block;
+        }
+        
+        @media screen and (max-width: 768px) {
+            header {
+                padding: 10px;
+            }
+            
+            .logo {
+                max-height: 40px;
+            }
+            
+            header h1 {
+                font-size: 1.5em;
+            }
+            
+            nav {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+            
+            nav ul li {
+                margin: 5px 0;
+                text-align: right;
+            }
+            
+            nav ul li a {
+                padding: 8px 0;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            
+            .logo {
+                margin-bottom: 5px;
+            }
+            
+            header h1 {
+                font-size: 1.2em;
+            }
+
+        /* bagong code */
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .disclaimer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: smaller;
+            padding: 10px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="FFR no bg.png" alt="Filipino Food Recipe" class="logo"> 
+            <h1>Kusina ng Bayan</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.HTML">Home</a></li>
+                <li><a href="FRecipe.html">Recipe</a></li>
+                <li><a href="AboutFFSNew.HTML">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <div class="food-container">
+            <div class="food-card" style="background-image: linear-gradient(to right,#e5d05f, #e4dc24, #e5d05f); ">
+            
+            <h2 style="font-size: 5em; text-decoration: none; font-family:Georgia, 'Times New Roman', Times, serif;">Welcome to Kusina ng Bayan!</h2> 
+                <div style="font-size: smaller; background-color: white; border-radius: 5%; padding: 3em;">
+                <p>Kusina ng Bayan have hidden gems like kare-kare. Where every recipe is presented with clear instructions, precise measurements, and handy tips for guaranteed success. And that's not all, we've made sure to include a complete list of ingredients for each recipe sourced from both local markets and international suppliers making it a breeze for you to gather everything you need. Whether you're a seasoned home cook or just starting out, our user-friendly website design makes finding the perfect recipe for any occasion a piece of cake. So, let's roll up our sleeves, sharpen our knives, and embark on an exciting culinary journey through the flavors of the Philippines together.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bagong code -->
+    <div class="disclaimer">
+        <h2>DISCLAIMER</h2>
+        <p>By accessing and using this website, you agree to the following terms and conditions. All content provided, including educational materials and resources, 
+            is intended for informational and educational purposes only. We do not make any representations or warranties regarding the accuracy, reliability, or 
+            completeness of the information. We are not responsible for any loss, damage, or injury resulting from the use of this website or its contents. 
+            Please use the information with caution and at your own discretion.</p>
+        <p>Share this page to:</p>
+        <div>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Link</a>
+        </div>
+
+    <div class="footer" style="margin-top: 0px;">
+        <p><b>© All Rights Reserved</b></p>
+    </div>
+
+    
+
+</body>
+</html>
