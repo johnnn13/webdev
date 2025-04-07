@@ -264,7 +264,9 @@
             h1 {
                 font-size: 1.5em;
             }
-            
+            .header h1 {
+                display: none;
+            }
             .member-info h3 {
                 font-size: 1.2em;
                 text-align: center;
@@ -274,9 +276,6 @@
                 width: 18%;
             }
             
-            .logo {
-                height: 40px;
-            }
         }
     </style>
 </head>
@@ -375,6 +374,16 @@
     <div class="footer" style="margin-top: 0px;">
         <p style="margin-left: 1em;"><b>© All Rights Reserved</b></p>
     </div>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const burgerMenu = document.querySelector('.burger-menu');
+            const navMenu = document.querySelector('nav ul');
+            
+            burgerMenu.addEventListener('click', function() {
+                burgerMenu.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>

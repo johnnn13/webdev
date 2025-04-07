@@ -154,6 +154,32 @@
             }
         }
         /*Burger Menu Code*/
+        @media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    nav ul li {
+        margin: 15px 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+    
+    nav ul li a {
+        display: block;
+        width: 100%;
+        font-size: 1.2em;
+        padding: 5px 0;
+    }
+}
         
         @media screen and (max-width: 480px) {
             
@@ -222,7 +248,17 @@
     <div class="footer" style="margin-top: 0px;">
         <p><b>© All Rights Reserved</b></p>
     </div>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const burgerMenu = document.querySelector('.burger-menu');
+            const navMenu = document.querySelector('nav ul');
+            
+            burgerMenu.addEventListener('click', function() {
+                burgerMenu.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+        });
+    </script>
     
 
 </body>
