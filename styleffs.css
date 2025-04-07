@@ -21,7 +21,10 @@ body {
 }
         
 header {
-    background-image: linear-gradient(to right,#e5d05f, #e4dc24, #e5d05f); 
+    /* background-color: #F9D923; */
+    /* background-image: linear-gradient(to right,#e5d05f, #e4dc24, #e5d05f);  */
+    background-image: linear-gradient(to right,#f3b64c, #e4dc24, #f3b64c); 
+
     display: flex;
     align-items: center;
     padding: 10px;
@@ -76,10 +79,6 @@ header {
             flex-wrap: wrap;
             justify-content: center;
             margin: 20px;
-
-            /* display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 10px; */
         }
 
         .food-card {
@@ -91,17 +90,6 @@ header {
             width: 1000px;
             text-align: justify;
 
-            /* display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding: 10px;
-            border: 5px solid #ff9800;
-            border-radius: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background: #ffffff;
-            max-width: 1000px;
-            width: 100%; */
-        
         }
 
         .food-card.full-screen {
@@ -163,7 +151,7 @@ header {
         }  
     
         .footer {
-            background-image: linear-gradient(to right,#e5d05f, #e4dc24, #e5d05f);
+            background-image: linear-gradient(to right,#f3b64c, #e4dc24, #f3b64c);
             color: #000000;
             text-align: center;
             font-size: 1em; 
@@ -188,6 +176,7 @@ header {
             text-align: center;
             width: 50%;
             height: 50%;
+            margin-left: 200px;
     
         }
         .search-container input[type="text"] {
