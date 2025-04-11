@@ -62,6 +62,19 @@
             list-style-type: disc;
             padding-left: 20px;
         }
+        .navigation-text {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .nav-link {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
         @media screen and (max-width: 768px) {
             .top-section {
                 grid-template-columns: 1fr;
@@ -161,6 +174,12 @@
                     <li>Transfer to a serving bowl. Serve and enjoy!</li>
                 </ol><br><br><br>
                 <p>Source: <a href="https://panlasangpinoy.com/chicken-feet-in-oyster-sauce-with-salted-black-beans/">https://panlasangpinoy.com/chicken-feet-in-oyster-sauce-with-salted-black-beans/</a></p>
+                <br>
+                <br>
+                <div class="navigation-text">
+                    <a href="page3.html" class="nav-link">Go back to recipes</a>
+                    <a href="#" class="nav-link" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Back to top</a>
+                </div>
             </div>
         </div>
     </div>

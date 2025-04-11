@@ -63,6 +63,19 @@
             list-style-type: disc;
             padding-left: 20px;
         }
+        .navigation-text {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            padding: 0 20px;
+        }
+        .nav-link {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .nav-link:hover {
+                text-decoration: underline;
+        }
         @media screen and (max-width: 768px) {
             .top-section {
                 grid-template-columns: 1fr;
@@ -86,7 +99,7 @@
             h2 {
                 font-size: 1.2em;
             }
-        }
+            }
         @media screen and (max-width: 480px) {
             .logo {
                 height: 30px;
@@ -188,6 +201,13 @@
                 <li>Serve cold with fried dishes. Share and Enjoy!</li>
 			</ol><br><br><br>
             <p>Source: <a href="https://panlasangpinoy.com/pickled-papaya-appetize-atsara-achara-atchara-recipe/">https://panlasangpinoy.com/pickled-papaya-appetize-atsara-achara-atchara-recipe/</a></p>
+        </div>
+        <br>
+        <br>
+        <div class="navigation-text">
+            <a href="page2.html" class="nav-link">Go back to recipes</a>
+            <a href="#" class="nav-link" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Back to top</a>
+        </div>
         </div>
     </div>
 </body>
