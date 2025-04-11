@@ -6,12 +6,26 @@
     <title>Recipes</title>
     <link rel="stylesheet" href="styleffs.css">
     <style>
+        /* General Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
             flex-wrap: wrap;
+            width: 100%;
         } 
         
         .header-left {
@@ -49,19 +63,109 @@
         nav ul li a {
             text-decoration: none;
             padding: 5px;
-            
         }
         
-        iframe {
+        .iframe-container {
+            flex: 1;
             width: 100%;
-            height: 595px;
-            border: none;
-            display: block;
+            display: flex;
+            flex-direction: column;
         }
 
-        .iframe-container{
-            margin: 0;
-            padding: 0;
+        iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 595px;
+            border: none;
+            flex: 1;
+        }
+
+        /* Gallery Styles */
+        .gallery {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 10px;
+        }
+        
+        .gallery .dish {
+            background-color: #deb887;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px;
+            border: #1d1d1d solid;
+            flex: 0 0 calc(33.333% - 20px);
+            max-width: 300px;
+        }
+
+        .gallery .description {
+            text-decoration: underline #deb887;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+            font-weight: bolder;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .gallery img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+        
+        .gallery .dish:hover {
+            background-color: rgb(243, 243, 243);
+            border-color: #000000;
+            text-decoration-skip: none;
+            color: black;
+        }
+
+        /* Button container centered at bottom */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 20px 0;
+            margin-top: auto;
+        }
+
+        .page-button {
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+
+        .page-button:hover {
+            background-color: #deb887;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #000;
+        }
+
+        /* Footer Styles */
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            background-color: #f8f8f8;
+            width: 100%;
+            border-top: 1px solid #ddd;
+            margin-top: auto;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
         }
 
         .burger-menu {
@@ -86,7 +190,7 @@
                 flex-direction: column;
                 padding: 10px 0px;
                 position: relative; 
-                justify-content: baseline;
+                justify-content: center;
                 flex-wrap: wrap;
                 align-items: center;
             }
@@ -103,12 +207,6 @@
                 margin-bottom: 10px;
                 max-width: 100px;
                 margin-right: 0px;
-            }
-            
-            .search-container {
-                width: 100%;
-                margin: 10px 0;
-                order: 3;
             }
             
             nav {
@@ -131,10 +229,19 @@
                 width: 100%;
                 text-align: center;
                 margin: 5px 0;
+                padding: 10px 0;
+                border-bottom: 1px solid rgba(0,0,0,0.1);
             }
             
-            #searchInput {
-                width: 70%;
+            nav ul li:last-child {
+                border-bottom: none;
+            }
+            
+            nav ul li a {
+                display: block;
+                width: 100%;
+                font-size: 1.2em;
+                padding: 5px 0;
             }
             
             .burger-menu {
@@ -153,52 +260,85 @@
                 transform: rotate(45deg) translate(-5px, -6px);
             }
             
-            #suggestionsList {
-                width: 70%;
+            /* Gallery responsive adjustments */
+            .gallery .dish {
+                flex: 0 0 calc(50% - 20px);
+                max-width: none;
             }
-        }
-
-        @media screen and (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-            }
-    
-            nav ul li {
-                margin: 15px 0;
-                width: 100%;
-                text-align: center;
-                padding: 10px 0;
-                border-bottom: 1px solid rgba(0,0,0,0.1);
-            }
-    
-            nav ul li:last-child {
-                border-bottom: none;
-            }       
-    
-            nav ul li a {
-                display: block;
-                width: 100%;
-                font-size: 1.2em;
-                padding: 5px 0;
-            }
-            }
-
-    @media screen and (max-width: 480px) {
-        .header h1 {
-            display: none;
-        }
-    }
             
+            .gallery img {
+                height: 180px;
+            }
+            
+            .gallery .description {
+                font-size: large;
+            }
+            
+            /* Button container for mobile */
+            .button-container {
+                flex-wrap: wrap;
+                gap: 5px;
+                padding: 10px 0; /* Reduced padding */
+            }
+    
+            .page-button {
+                margin: 2px;
+                padding: 6px 12px; /* Smaller padding */
+                font-size: 0.9em; /* Smaller text */
+                min-width: 30px; /* Ensure consistent width */
+                text-align: center;
+            }
+            
+            /* Footer responsive styles */
+            .footer {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .header h1 {
+                display: none;
+            }
+            
+            .gallery .dish {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .gallery img {
+                height: 200px;
+            }
+            .button-container {
+                padding: 5px 0; /* Even less padding */
+            }
+    
+            .page-button {
+                padding: 5px 10px; /* Even smaller padding */
+                font-size: 0.8em; /* Even smaller text */
+                margin: 1px;
+            }
+        }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const burgerMenu = document.querySelector('.burger-menu');
+            const navUl = document.querySelector('nav ul');
+            
+            burgerMenu.addEventListener('click', function() {
+                burgerMenu.classList.toggle('active');
+                navUl.classList.toggle('active');
+            });
+        });
+    </script>
 </head>
 <body>
     <header class="header">
-    <div class="header-left">
-        <img src="FFR no bg.png" alt="Filipino Food Recipe" class="logo">
-        <h1>Kusina ng Bayan</h1>
-    </div>
+        <div class="header-left">
+            <img src="FFR no bg.png" alt="Filipino Food Recipe" class="logo">
+            <h1>Kusina ng Bayan</h1>
+        </div>
         <div class="burger-menu">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -215,24 +355,24 @@
     </header>
 
     <div class="iframe-container">
-        <iframe id="recipeFrame" src="page1.html"></iframe>
+        <iframe id="recipeFrame" name="recipeFrame" src="page1.html"></iframe>
     </div>
 
-    <div class="footer" style="margin-top: 0px;">
-        <div class="footer" style="margin-top: 0px;">
-            <p style="margin-right: 10px;">Share this page to:</p>
-            <div class="social-links">
-                <a href="https://www.facebook.com/" target="_blank" title="Facebook">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="32">
-                </a>
-                
-                <a href="https://www.instagram.com/" target="_blank" title="Instagram">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" width="32">
-                </a>
-                
-                <a href="https://twitter.com/intent/tweet" target="_blank" title="X (Twitter)">
-                  <img src="https://abs.twimg.com/favicons/twitter.3.ico" alt="X (Twitter)" width="32">
-                </a>
-              </div>
+    <footer class="footer">
+        <p>Share this page to:</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="32">
+            </a>
+            
+            <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" width="32">
+            </a>
+            
+            <a href="https://twitter.com/intent/tweet" target="_blank" title="X (Twitter)">
+              <img src="https://abs.twimg.com/favicons/twitter.3.ico" alt="X (Twitter)" width="32">
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
