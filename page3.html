@@ -45,7 +45,11 @@
 
         .button-container {
     display: flex;
-    gap: 10px; /* Adjust spacing between buttons */
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0; 
+    margin-top: 20px;
   }
   .page-button {
     padding: 10px 20px;
@@ -55,22 +59,22 @@
     color: #333;
     border-radius: 5px;
     cursor: pointer;
+    margin: 0 5px; /* Add margin between buttons */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
   }
 
   .page-button:hover {
-    background-color: #e0e0e0;
+        background-color: #deb887; /* Match the dish color theme */
+        transform: translateY(-2px); /* Slight lift effect */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        color: #000; /* Darker text on hover */
   }
     </style>
 <body>
     
 
     <div class="gallery">
-        <div class="dish">
-            <a href="Hardinera.HTML">
-                <img src="/FFS_Pics/Hardinera2_1.webp" alt="">
-                <div class="description">Hardinera</div>
-            </a>
-        </div>
+
 
 <div class="dish">
     <a href="Sinuglaw.html">
@@ -219,11 +223,13 @@
 </div>
 
 <div class="button-container">
-    <a href="C:\Users\joshua\Documents\GitHub\webdev\page1.html" class="page-button"> 1</a>
-    <a href="C:\Users\joshua\Documents\GitHub\webdev\page2.html" class="page-button"> 2</a>
-    <a href="C:\Users\joshua\Documents\GitHub\webdev\page3.html" class="page-button"> 3</a>
-    <a href="C:\Users\joshua\Documents\GitHub\webdev\page4.html" class="page-button"> 4</a>
-    <a href="C:\Users\joshua\Documents\GitHub\webdev\page5.html" class="page-button"> 5</a>
+    <a href="page2.html" class="page-button"> <</a>
+    <a href="page1.html" class="page-button"> 1</a>
+    <a href="page2.html" class="page-button"> 2</a>
+    <a style="background-color: #bda07b;" href="page3.html" class="page-button"> 3</a>
+    <a href="page4.html" class="page-button"> 4</a>
+    <a href="page5.html" class="page-button"> 5</a>
+    <a href="page4.html" class="page-button"> ></a>
   </div>
 </body>
 </html>
