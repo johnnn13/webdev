@@ -61,6 +61,19 @@
             list-style-type: disc;
             padding-left: 20px;
         }
+        .navigation-text {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            padding: 0 20px;
+        }
+        .nav-link {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .nav-link:hover {
+                text-decoration: underline;
+        }
         @media screen and (max-width: 768px) {
             .top-section {
                 grid-template-columns: 1fr;
@@ -171,6 +184,12 @@
                     <li>Share and enjoy!</li>
                 </ol><br><br><br>
                 <p>Source: <a href="https://panlasangpinoy.com/pineapple-chicken-casserole-pininyahang-manok-recipe/">https://panlasangpinoy.com/pineapple-chicken-casserole-pininyahang-manok-recipe/</a></p>
+            </div>
+            <br>
+            <br>
+            <div class="navigation-text">
+                <a href="page4.html" class="nav-link">Go back to recipes</a>
+                <a href="#" class="nav-link" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Back to top</a>
             </div>
         </div>
 </body></html>

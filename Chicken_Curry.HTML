@@ -296,6 +296,19 @@
             list-style-type: disc;
             padding-left: 20px;
         }
+        .navigation-text {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            padding: 0 20px;
+        }
+        .nav-link {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .nav-link:hover {
+                text-decoration: underline;
+        }
         @media screen and (max-width: 768px) {
             .top-section {
                 grid-template-columns: 1fr;
@@ -403,6 +416,12 @@
                 <p>Source: <a href="https://panlasangpinoy.com/filipino-style-chicken-curry-knr-mm/">https://panlasangpinoy.com/filipino-style-chicken-curry-knr-mm/
                 </a></p>
             </div>
+            <br>
+        <br>
+        <div class="navigation-text">
+            <a href="page2.html" class="nav-link">Go back to recipes</a>
+            <a href="#" class="nav-link" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Back to top</a>
+        </div>
         </div>
 </body></html>
 >>>>>>> 2dc6e9cfe6bd0db4dd16cf8420a2578c95bb4c69

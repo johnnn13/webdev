@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet" href="styleffs.css">
+</head>
+
+    <style>
+        .gallery {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        .gallery .dish {
+            background-color: #f4f1f1;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .gallery .description {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+            font-weight: bolder;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .gallery img {
+            height: 250px;
+            width: 250px;
+            border-radius: 30px;
+        }
+        .gallery .dish:hover {
+            background-color: orange;
+            border-color:#000000;
+        }
+        a{
+            text-decoration: none;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 20px 0;
+            margin-top: auto;
+        }
+
+        .page-button {
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+
+        .page-button:hover {
+            background-color: #deb887;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #000;
+        }
+
+        @media screen and (max-width: 768px) {
+            /* Button container for mobile */
+            .button-container {
+                flex-wrap: wrap;
+                gap: 5px;
+                padding: 10px 0; /* Reduced padding */
+            }
+            
+            .page-button {
+                margin: 2px;
+                padding: 6px 12px; /* Smaller padding */
+                font-size: 0.9em; /* Smaller text */
+                min-width: 30px; /* Ensure consistent width */
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .button-container {
+                padding: 8px 0; /* Even less padding */
+            }
+            
+            .page-button {
+                padding: 5px 10px; /* Even smaller padding */
+                font-size: 0.8em; /* Even smaller text */
+                margin: 1px;
+            }
+        }
+            </style>
+        <body>
+            
+
+            <div class="gallery">
+
+
+        <div class="dish">
+            <a href="Sinuglaw.html">
+                <img src="FFS_Pics/Sinuglaw.jpg" alt="">
+                <div class="description">Sinuglaw</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Binagoongan_Baboy.html">
+                <img src="FFS_Pics/Binagoongan_Baboy.jpg" alt="">
+                <div class="description">Binagoongang</div>
+                <div class="description">Baboy</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Balbacua.html">
+                <img src="FFS_Pics/Balbacua.jpg" alt="">
+                <div class="description">Balbacua</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Pinais_na_Hipon.html">
+                <img src="FFS_Pics/Pinais_na_Hipon.jpg" alt="">
+                <div class="description">Pinais na Hipon</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Tinolang_Isda.html">
+                <img src="FFS_Pics/Tinolang_Isda.jpg" alt="">
+                <div class="description">Tinolang Isda</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Sinaing_na_Tulingan.HTML">
+                <img src="FFS_Pics/Sinaing_na_Tulingan.jpg" alt="">
+                <div class="description">Sinaing na </div>
+                <div class="description">Tulingan</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Relyenong_Bangus.html">
+                <img src="FFS_Pics/Relyenong_Bangus.jpg" alt="">
+                <div class="description">Relyenong</div>
+                <div class="description">Bangus</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Isaw.html">
+                <img src="FFS_Pics/Isaw.jpg" alt="">
+                <div class="description">Isaw</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Tokwa't_ Baboy.html">
+                <img src="FFS_Pics/Tokwat_Baboy.jpg" alt="">
+                <div class="description">Tokwa't Baboy</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Betamax.html">
+                <img src="FFS_Pics/Betamax.jpg" alt="">
+                <div class="description">Betamax</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Kwek_kwek.html">
+                <img src="FFS_Pics/Kwek_kwek.jpg" alt="">
+                <div class="description">Kwek kwek</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Adidas.html">
+                <img src="FFS_Pics/Adidas.jpg" alt="">
+                <div class="description">Adidas</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Pritong_Hito.html">
+                <img src="FFS_Pics/Pritong_Hito.jpg" alt="">
+                <div class="description">Pritong Hito</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Tapsilog.html">
+                <img src="FFS_Pics/Tapsilog.jpg" alt="">
+                <div class="description">Tapsilog</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Kare_Kare.html">
+                <img src="FFS_Pics/Kare_Kare.jpg" alt="">
+                <div class="description">Kare Kare</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Bulalo.html">
+                <img src="FFS_Pics/Bulalo.jpg" alt="">
+                <div class="description">Bulalo</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Chicharon_Bulaklak.html">
+                <img src="FFS_Pics/Chicharon_Bulaklak.jpg" alt="">
+                <div class="description">Chicharon</div>
+                <div class="description">Bulaklak</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Goto.html">
+                <img src="FFS_Pics/Goto.jpg" alt="">
+                <div class="description">Goto</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Chicken_Arroz_Caldo.html">
+                <img src="FFS_Pics/Chicken_Arroz_Caldo.jpg" alt="">
+                <div class="description">Chicken Arroz</div>
+                <div class="description">Caldo</div>
+            </a>           
+        </div>
+
+        <div class="dish">
+            <a href="Embutido.html">
+                <img src="FFS_Pics/Embutido.jpg" alt="">
+                <div class="description">Embutido</div>
+            </a>           
+        </div>
+        </div>
+        <div class="button-container">
+            <a href="page2.html" class="page-button"> <</a>
+            <a href="page1.html" class="page-button"> 1</a>
+            <a href="page2.html" class="page-button"> 2</a>
+            <a style="background-color: #bda07b;" href="page3.html" class="page-button"> 3</a>
+            <a href="page4.html" class="page-button"> 4</a>
+            <a href="page5.html" class="page-button"> 5</a>
+            <a href="page4.html" class="page-button"> ></a>
+        </div>
+        </body>
+        </html>

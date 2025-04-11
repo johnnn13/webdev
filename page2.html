@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet" href="styleffs.css">
+    <style>
+        /* Add your existing styles here */
+        .gallery {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        .gallery .dish {
+            background-color: #f4f1f1;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .gallery .description {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+            font-weight: bolder;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .gallery img {
+            height: 250px;
+            width: 250px;
+            border-radius: 30px;
+        }
+        .gallery .dish:hover {
+            background-color: orange;
+            border-color:#000000;
+        }
+        a{
+            text-decoration: none;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 20px 0;
+            margin-top: auto;
+        }
+
+        .page-button {
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+
+        .page-button:hover {
+            background-color: #deb887;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #000;
+        }
+
+        @media screen and (max-width: 768px) {
+            /* Button container for mobile */
+            .button-container {
+                flex-wrap: wrap;
+                gap: 5px;
+                padding: 10px 0; /* Reduced padding */
+            }
+            
+            .page-button {
+                margin: 2px;
+                padding: 6px 12px; /* Smaller padding */
+                font-size: 0.9em; /* Smaller text */
+                min-width: 30px; /* Ensure consistent width */
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .button-container {
+                padding: 8px 0; /* Even less padding */
+            }
+            
+            .page-button {
+                padding: 5px 10px; /* Even smaller padding */
+                font-size: 0.8em; /* Even smaller text */
+                margin: 1px;
+            }
+        }
+            </style>
+        </head>
+        <body>
+            
+            <div class="gallery">
+
+                <div class="dish">
+                    <a href="Pinakbet.HTML">
+                        <img src="FFS_Pics/Pinakbet.jpg" alt="">
+                        <div class="description">Pinakbet</div>
+                    </a>           
+                </div>
+
+                <div class="dish">
+                    <a href="Ginataang_Isda.html">
+                        <img src="FFS_Pics/Ginataang_Isda.jpg" alt="">
+                        <div class="description">Ginataang Isda</div>
+                    </a>           
+                </div>
+
+                <div class="dish">
+                    <a href="Pork_Menudo.html">
+                        <img src="FFS_Pics/Pork_Menudo.jpg" alt="">
+                        <div class="description">Pork Menudo</div>
+                    </a>           
+                </div>
+
+                <div class="dish">
+                    <a href="Bicol_Express.html">
+                        <img src="FFS_Pics/Bicol_Express.jpg" alt="">
+                        <div class="description">Bicol Express</div>
+                    </a>           
+                </div>
+
+                <div class="dish">
+                    <a href="Tambakol.html">
+                        <img src="FFS_Pics/Tambakol.jpg" alt="">
+                        <div class="description">Ginataang</div>
+                        <div class="description">Tambakol</div>
+                    </a>           
+                </div>
+
+                <div class="dish">
+                    <a href="Atsara.html">
+                        <img src="FFS_Pics/Atsara.jpg" alt="">
+                        <div class="description">Atsara</div>
+                    </a>           
+                </div>
+
+                <div class="dish">
+                    <a href="Lechon_Paksiw.html">
+                        <img src="FFS_Pics/Lechon_Paksiw.jpg" alt="">
+                        <div class="description">Lechon Paksiw</div>
+                    </a>           
+                </div>
+
+                <div class="dish">
+                    <a href="Ginataan_Laing.HTML">
+                        <img src="FFS_Pics/Ginataan_Laing.jpg" alt="">
+                        <div class="description">Ginataan Laing</div>
+                    </a>           
+                </div>
+
+                <div class="dish">
+                    <a href="Chicken_Curry.HTML">
+                        <img src="FFS_Pics/Chicken_Curry.jpg" alt="">
+                        <div class="description">Chicken Curry</div>
+                    </a>           
+                </div>
+
+                <div class="dish">
+                    <a href="Tinolang_Manok.HTML">
+                        <img src="FFS_Pics/Tinolang_Manok.jpg" alt="">
+                        <div class="description">Tinolang Manok</div>
+                    </a>           
+                </div>
+
+                <div class="dish">
+                    <a href="Ginataang_Kuhol.HTML">
+                        <img src="FFS_Pics/Ginataang_Kuhol.jpg" alt="">
+                        <div class="description">Ginataang Kuhol</div>
+                    </a>           
+                </div>
+
+                <div class="dish">
+                    <a href="Sinangag.HTML">
+                        <img src="FFS_Pics/Sinangag.jpg" alt="">
+                        <div class="description">Sinangag</div>
+                    </a>           
+                </div>
+
+                <div class="dish">
+                    <a href="Ginisang_Ampalaya.HTML">
+                        <img src="FFS_Pics/Ginisang_Ampalaya.jpg" alt="">
+                        <div class="description">Ginisang</div>
+                        <div class="description">Ampalaya</div>
+                    </a>           
+                </div>
+
+                <div class="dish">
+                    <a href="Dinuguan.html">
+                        <img src="FFS_Pics/Dinuguan.jpg" alt="">
+                        <div class="description">Dinuguan</div>
+                    </a>           
+                </div>
+
+                <div class="dish">
+                    <a href="Ukoy.html">
+                        <img src="FFS_Pics/Ukoy.jpg" alt="">
+                        <div class="description">Ukoy</div>
+                    </a>           
+                </div>
+
+                <div class="dish">
+                    <a href="Sinigang_na_Bangus.html">
+                        <img src="FFS_Pics/Sinigang_na_Bangus" alt="">
+                        <div class="description">Sinigang na</div>
+                        <div class="description">Bangus</div>
+                    </a>           
+                </div>
+
+                <div class="dish">
+                    <a href="Sinigang_na_Baboy.html">
+                        <img src="FFS_Pics/Sinigang_na_Baboy.jpg" alt="">
+                        <div class="description">Sinigang na</div>
+                        <div class="description">Baboy</div>
+                    </a>           
+                </div>
+
+                <div class="dish">
+                    <a href="Ginataang_Alimasag.html">
+                        <img src="FFS_Pics/Ginataang_Alimasag" alt="">
+                        <div class="description">Ginataang</div>
+                        <div class="description">Alimasag</div>
+                    </a>           
+                </div>
+
+                <div class="dish">
+                    <a href="Chopsuey.html">
+                        <img src="FFS_Pics/Chopsuey.jpg" alt="">
+                        <div class="description">Chopsuey</div>
+                    </a>           
+                </div>
+
+                <div class="dish">
+                    <a href="Camaron_Rebosado.html">
+                        <img src="FFS_Pics/Camaron_Rebosado.jpg" alt="">
+                        <div class="description">Camaron</div>
+                        <div class="description">Rebosado</div>
+                    </a>           
+                </div>
+            </div>
+            <div class="button-container">
+                <a href="page1.html" class="page-button"> <</a>
+                <a href="page1.html" class="page-button"> 1</a>
+                <a style="background-color: #bda07b;" href="page2.html" class="page-button"> 2</a>
+                <a href="page3.html" class="page-button"> 3</a>
+                <a href="page4.html" class="page-button"> 4</a>
+                <a href="page5.html" class="page-button"> 5</a>
+                <a href="page3.html" class="page-button"> ></a>
+            </div>
+        </body>
+        </html>
