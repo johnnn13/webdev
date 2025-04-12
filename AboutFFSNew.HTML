@@ -7,68 +7,83 @@
     <link rel="stylesheet" href="styleffs.css">
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #f0f0f0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-attachment: fixed;
         }
         .container {
-            max-width: 90%;
-            margin: 5% 10% 5% 10%;
+            max-width: 1200px;
+            margin: 20px auto;
             padding: 20px;
             background: linear-gradient(to right,#e5d05f, #e4dc24, #e5d05f); 
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            flex: 1;
         }
         .team {
             display: flex;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
         }
         .member {
-            width: 30%;
-            height: 530px;
+            width: calc(20% - 15px);
+            max-height: 340px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 10px 0;
             padding: 15px;
             border-radius: 10px;
             background: white;
-            text-align: left;
+            text-align: center;
             box-sizing: border-box;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .member:hover {
+            transform: translateY(-5px);
         }
         .member img {
-            width: 120px;
-            height: 120px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 20px;
-            margin-left: 10px;
-            margin-bottom: 15px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
         .member-info {
-            flex: 1;
+            width: 100%;
+        }
+        .member-info h3 {
+            font-size: 1.1em;
+            margin: 5px 0;
+        }
+        .member-info p {
+            margin: 5px 0;
+            font-size: 0.9em;
         }
         .member-info ul {
             padding-left: 0; 
             list-style-type: none; 
-            text-align: center; 
+            text-align: center;
+            margin: 5px 0;
+        }
+        .member-info li {
+            font-size: 0.85em;
+            margin-bottom: 3px;
         }
         h1 {
             margin-bottom: 20px;
         }
-        h2 {
-            font-size: 1.8em;
-        }
         
+        /* Original header styles */
         .header {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 10px 20px;
+            background: linear-gradient(to right,#e5d05f, #e4dc24, #e5d05f);
         }
         
         .header-left {
@@ -104,9 +119,9 @@
         nav ul li a {
             text-decoration: none;
             padding: 5px;
+            color: #000;
         }
-
-         
+        
         .burger-menu {
             display: none;
             cursor: pointer;
@@ -124,11 +139,52 @@
             transition: 0.4s;
         }
         
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            background: linear-gradient(to right,#e5d05f, #e4dc24, #e5d05f);
+            margin-top: auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .social-links a {
+            transition: transform 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            transform: scale(1.1);
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 992px) {
+            .member {
+                width: calc(33.33% - 15px);
+            }
+        }
+        
         @media screen and (max-width: 768px) {
+            .container {
+                max-width: 95%;
+                margin: 10px auto;
+                padding: 15px;
+            }
+            
+            .member {
+                width: calc(50% - 15px);
+            }
+            
             .header {
                 flex-direction: column;
                 padding: 10px 0px;
-                position: relative; 
+                position: relative;
                 justify-content: baseline;
                 flex-wrap: wrap;
                 align-items: center;
@@ -140,6 +196,7 @@
                 padding: 10px;
                 position: relative;
                 align-items: center;
+                margin-bottom: 10px;
             }
             
             .logo {
@@ -148,91 +205,23 @@
                 margin-right: 0px;
             }
             
-            .search-container {
-                width: 100%;
-                margin: 10px 0;
-                order: 3;
-            }
-            
-            nav {
-                width: 100%;
-                order: 2;
+            .burger-menu {
+                display: block;
             }
             
             nav ul {
                 display: none;
                 flex-direction: column;
                 width: 100%;
-                padding: 0;
+                text-align: center;
             }
-          
+            
             nav ul.active {
                 display: flex;
             }
             
             nav ul li {
-                width: 100%;
-                text-align: center;
                 margin: 5px 0;
-            }
-            
-            #searchInput {
-                width: 70%;
-            }
-            
-            .burger-menu {
-                display: block;
-            }
-            
-            .burger-menu.active .bar:nth-child(1) {
-                transform: rotate(-45deg) translate(-5px, 6px);
-            }
-            
-            .burger-menu.active .bar:nth-child(2) {
-                opacity: 0;
-            }
-            
-            .burger-menu.active .bar:nth-child(3) {
-                transform: rotate(45deg) translate(-5px, -6px);
-            }
-            
-            #suggestionsList {
-                width: 70%;
-            }
-        }
-         
-
-        @media screen and (max-width: 768px) {
-            
-            .member {
-                width: 18%;
-            }
-            
-            .member img {
-                margin: 0 auto 15px;
-                width: 100px;
-                height: 100px;
-            }
-            
-            .member-info ul {
-                text-align: left;
-            }
-            
-            h2 {
-                font-size: 1.5em;
-            }
-            
-            @media screen and (max-width: 768px) {
-    
-    
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-            }
-            
-            nav ul li {
-                margin: 15px 0;
                 width: 100%;
                 text-align: center;
                 padding: 10px 0;
@@ -250,25 +239,57 @@
                 padding: 5px 0;
             }
         }
-        }
         
         @media screen and (max-width: 480px) {
-            
-            h1 {
-                font-size: 1.5em;
+            .member {
+                width: calc(100% - 15px);
+                max-height: none;
+                flex-direction: row;
+                text-align: left;
+                padding: 10px;
             }
+            
+            .member img {
+                margin-right: 15px;
+                margin-bottom: 0;
+            }
+            
+            .member-info {
+                flex: 1;
+            }
+            
+            .member-info ul {
+                text-align: left;
+            }
+            
+            .member-info h3 {
+                font-size: 1em;
+            }
+            
             .header h1 {
                 display: none;
             }
-            .member-info h3 {
-                font-size: 1.2em;
-                text-align: center;
+            
+            .logo {
+                height: 50px;
             }
             
-            .member {
-                width: 18%;
+            .footer {
+                flex-direction: column;
             }
-            
+        }
+        
+        /* Burger menu animation */
+        .burger-menu.active .bar:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .burger-menu.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .burger-menu.active .bar:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
         }
     </style>
 </head>
@@ -289,7 +310,7 @@
                 <li><a href="HomeFFR.html">Home</a></li>
                 <li><a href="FRecipe.html">Recipe</a></li>
                 <li style="text-decoration-line: underline;"><a href="AboutFFSNew.HTML">About</a></li>
-            </b></ul>
+            </ul>
         </nav>
     </header>
     
@@ -297,7 +318,7 @@
         <h1>Web Developers</h1>
         <div class="team">
             <div class="member">
-                <img src="FFS_Formal/Radam.jpg" alt="Person 1">
+                <img src="FFS_Formal/Radam.jpg" alt="Aleya Joy Radam">
                 <div class="member-info">
                     <h3>Aleya Joy Radam</h3>
                     <p><strong>Position:</strong></p>
@@ -310,7 +331,7 @@
             </div>
 
             <div class="member">
-                <img src="FFS_Formal/Pinca.jpg" alt="Person 2">
+                <img src="FFS_Formal/Pinca.jpg" alt="Richmond Pinca">
                 <div class="member-info">
                     <h3>Richmond Pinca</h3>
                     <p><strong>Position:</strong></p>
@@ -323,7 +344,7 @@
             </div>
             
             <div class="member">
-                <img src="FFS_Formal/Aquino.jpg" alt="Person 3">
+                <img src="FFS_Formal/Aquino.jpg" alt="Irvyne Aquino">
                 <div class="member-info">
                     <h3>Irvyne Aquino</h3>
                     <p><strong>Position:</strong></p>
@@ -336,7 +357,7 @@
             </div>
 
             <div class="member">
-                <img src="FFS_Formal/Bation.jpg" alt="Person 4">
+                <img src="FFS_Formal/Bation.jpg" alt="John Bation">
                 <div class="member-info">
                     <h3>John Bation</h3>
                     <p><strong>Position:</strong></p>
@@ -349,7 +370,7 @@
             </div>
 
             <div class="member">
-                <img src="FFS_Formal/Pineda.jpg" alt="Person 5">
+                <img src="FFS_Formal/Pineda.jpg" alt="Joshua Pineda">
                 <div class="member-info">
                     <h3>Joshua Pineda</h3>
                     <p><strong>Position:</strong></p>
@@ -363,21 +384,29 @@
         </div>
     </div>
 
-    <div class="footer" style="margin-top: 0px;">
-        <div class="footer" style="margin-top: 0px;">
-            <p style="margin-right: 10px;">Share this page to:</p>
-            <div class="social-links">
-                <a href="https://www.facebook.com/" target="_blank" title="Facebook">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="32">
-                </a>
-                
-                <a href="https://www.instagram.com/" target="_blank" title="Instagram">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" width="32">
-                </a>
-                
-                <a href="https://twitter.com/intent/tweet" target="_blank" title="X (Twitter)">
-                  <img src="https://abs.twimg.com/favicons/twitter.3.ico" alt="X (Twitter)" width="32">
-                </a>
-              </div>
+    <div class="footer">
+        <p style="margin-right: 10px;">Share this page to:</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="32">
+            </a>
+            
+            <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" width="32">
+            </a>
+            
+            <a href="https://twitter.com/intent/tweet" target="_blank" title="X (Twitter)">
+                <img src="https://abs.twimg.com/favicons/twitter.3.ico" alt="X (Twitter)" width="32">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Toggle menu for mobile
+        document.querySelector('.burger-menu').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

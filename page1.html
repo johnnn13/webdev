@@ -65,6 +65,12 @@
             color: #000;
         }
 
+        @media screen and (max-width: 992px) {
+            .search-container {
+                width: 70%;
+            }
+        }       
+
         @media screen and (max-width: 768px) {
             /* Button container for mobile */
             .button-container {
@@ -80,6 +86,20 @@
                 min-width: 30px; /* Ensure consistent width */
                 text-align: center;
             }
+
+            .search-container {
+                width: 85%;
+            }
+    
+            #searchInput {
+                padding: 10px 40px 10px 12px;
+                font-size: 15px;
+            }
+    
+            #searchButton {
+                width: 40px;
+                font-size: 16px;
+            }
         }
 
         @media screen and (max-width: 480px) {
@@ -91,6 +111,32 @@
                 padding: 5px 10px; /* Even smaller padding */
                 font-size: 0.8em; /* Even smaller text */
                 margin: 1px;
+            }
+            .center-container {
+                padding: 15px 10px;
+            }
+    
+            .search-container {
+                width: 95%;
+            }
+    
+            #searchInput {
+                padding: 8px 35px 8px 10px;
+                font-size: 14px;
+            }
+    
+            #searchButton {
+                width: 35px;
+                font-size: 14px;
+            }
+    
+            .suggestions-dropdown {
+                max-height: 200px;
+            }
+    
+            .suggestions-dropdown li {
+                padding: 8px 10px;
+                font-size: 14px;
             }
         }
             </style>
