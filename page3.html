@@ -97,6 +97,15 @@
             </style>
         <body>
             
+            <div class="center-container">
+                <div class="search-container">
+                  <form id="searchForm">
+                    <input type="text" id="searchInput" placeholder="Search..." required autofocus>
+                    <ul id="suggestionsList" class="suggestions-dropdown" style="display: none;"></ul>
+                  </form>
+                  <button type="submit" id="searchButton">🔍︎</button>
+                </div>
+            </div>
 
             <div class="gallery">
 
@@ -256,4 +265,65 @@
             <a href="page4.html" class="page-button"> ></a>
         </div>
         </body>
+
+        <script>
+            const searchItems = [
+                    "adidas", "adobong manok", "atsara", "bagnet", "balbacua", "beef bistek", "beef mami", "beef papaitan", "betamax", "bibingka", "bicol express", "biko", "binagoongan baboy", "buko pandan", "bulalo", "camaron rebosado", "cassava cake", "champorado", "chicharon bulaklak", "chicken arroz caldo", "chicken asado", "chicken curry", "chicken sotanghon", "chopsuey", "crispy pata", "daing na bangus", "dinakdakan", "dinuguan", "embutido", "espasol", "filipino style beef steak", "ginataang laing", "ginataang alimasag", "ginataang bilo bilo", "ginataang isda", "ginataang kuhol", "ginataang langka", "ginataang santol", "ginataang sitaw kalabasa", "ginisang ampalaya", "ginisang pusit", "goto", "halo halo", "hardinera", "inihaw na liempo", "isaw", "kadyos baboy langka", "kalderetang kambing", "kare kare", "kinamatisang manok", "kinilaw na tuna", "kutsinta", "kwek kwek", "la paz batchoy", "leche flan", "lechon manok", "lechon paksiw", "lumpia", "maja blanca", "nilagang baka", "nilagang manok", "paksiw", "pancit bato guisado", "pancit bihon", "pancit canton", "pancit habhab", "pinais na hipon", "pinakbet", "pinaltok", "pininyahang manok", "pochero", "pork adobo", "pork chop steak", "pork menudo", "pork sisig", "pritong hito", "puto bumbong", "puto", "Relyenong bangus", "saging con hielo", "sapin sapin", "sinaing na tulingan", "sinangag", "sinigang na baboy", "sinigang na bagnet", "sinigang na bangus", "sinigang sa miso", "sinuglaw", "suman sa lihiya", "taho", "tamales", "tambakol", "tapsilog", "tinolang isda", "tinolang manok", "tokwa't baboy", "tortang talong", "turon", "ube halaya", "ukoy"
+                ];
+            
+                const searchInput = document.getElementById('searchInput');
+                const suggestionsList = document.getElementById('suggestionsList');
+            
+                searchInput.addEventListener('input', () => {
+                  const input = searchInput.value.toLowerCase().trim();
+                  suggestionsList.innerHTML = '';
+            
+                  if (!input) {
+                    suggestionsList.style.display = 'none';
+                    return;
+                  }
+            
+                  const filtered = searchItems.filter(item => item.toLowerCase().includes(input));
+            
+                  if (filtered.length > 0) {
+                    suggestionsList.style.display = 'block';
+                    filtered.forEach(item => {
+                      const li = document.createElement('li');
+                      li.textContent = item;
+                      li.addEventListener('click', () => {
+                        searchInput.value = item;
+                        suggestionsList.style.display = 'none';
+                        handleSearch();
+                      });
+                      suggestionsList.appendChild(li);
+                    });
+                  } else {
+                    suggestionsList.style.display = 'none';
+                  }
+                });
+            
+                document.addEventListener('click', (e) => {
+                  if (!document.querySelector('.search-container').contains(e.target)) {
+                    suggestionsList.style.display = 'none';
+                  }
+                });
+            
+            function handleSearch() {
+                  const query = document.getElementById('searchInput').value.trim();
+                  if (query) {
+                    window.location.href = `FRecipe-search.html?query=${encodeURIComponent(query)}`;
+                  } else {
+                    alert("Please enter a search term.");
+                  }
+                }
+                document.getElementById('searchButton').addEventListener('click', handleSearch);
+                document.getElementById('searchInput').addEventListener('keypress', function (event) {
+                  if (event.key === 'Enter') {
+                    event.preventDefault(); 
+                    handleSearch();
+                  }
+                });
+            
+              </script>
+
         </html>

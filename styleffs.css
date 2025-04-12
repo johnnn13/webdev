@@ -184,7 +184,7 @@ header {
             border-radius: 20px;
             border: 2px solid #ccc;
             margin-right: 10px;
-            width: 70%; 
+            width: 170%; 
             font-size: 16px; 
         }
         .search-container button {
@@ -195,6 +195,7 @@ header {
             border-radius: 50px;
             cursor: pointer;
             font-size: 20px;
+            margin-left: 190px;
         } 
 
         .suggestions-dropdown {
@@ -203,7 +204,7 @@ header {
             background: white;
             border: 1px solid #ccc;
             max-height: 175px;
-            width: 100%;
+            width: 65%;
             overflow-y: auto;
             list-style-type: none;
             padding: 0;
