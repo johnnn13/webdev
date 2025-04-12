@@ -6,12 +6,25 @@
     <title>Home</title>
     <link rel="stylesheet" href="styleffs.css">
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            line-height: 1.6;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
             flex-wrap: wrap;
+            width: 100%;
         } 
         
         .header-left {
@@ -52,7 +65,7 @@
             display: block;
         }
 
-        /*Burger Menu Code*/
+        /* Burger Menu Code */
         .burger-menu {
             display: none;
             cursor: pointer;
@@ -70,13 +83,107 @@
             transition: 0.4s;
         }
         
+        /* Content Styling */
+        .food-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto 20px auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .food-card {
+            background-image: linear-gradient(to right,#e5d05f, #e4dc24, #e5d05f);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .food-card h2 {
+            font-size: 3em;
+            text-decoration: none;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-bottom: 20px;
+        }
+
+        .food-card-content {
+            background-color: white;
+            border-radius: 15px;
+            padding: 3em;
+            text-align: justify;
+            font-size: 0.85em;
+        }
+
+        /* Disclaimer Section */
+        .disclaimer-container {
+            background-image: linear-gradient(to right,#e5d05f, #e4dc24, #e5d05f);
+            width: 90%;
+            max-width: 1200px;
+            padding: 15px;
+            margin: 0 auto 20px auto;
+            border-radius: 5px;
+        }
+
+        .disclaimer-title {
+            text-align: center;
+            margin: 0 0 10px 0;
+        }
+
+        .disclaimer-text {
+            text-align: justify;
+            padding: 0 15px;
+            font-size: 0.9em;
+        }
+
+        /* Footer Styling */
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .footer p {
+            margin-right: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .social-links a {
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 1200px) {
+            .food-card h2 {
+                font-size: 2.5em;
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            .food-card h2 {
+                font-size: 2em;
+            }
+            
+            .food-card-content {
+                padding: 2em;
+            }
+        }
+
         @media screen and (max-width: 768px) {
             .header {
                 flex-direction: column;
-                padding: 10px 0px;
+                padding: 10px 0;
                 position: relative; 
-                justify-content: baseline;
-                flex-wrap: wrap;
+                justify-content: center;
                 align-items: center;
             }
             
@@ -87,16 +194,11 @@
                 position: relative;
                 align-items: center;
             }
+
             .logo {
                 margin-bottom: 10px;
                 max-width: 100px;
-                margin-right: 0px;
-            }
-            
-            .search-container {
-                width: 100%;
-                margin: 10px 0;
-                order: 3;
+                margin-right: 0;
             }
             
             nav {
@@ -119,10 +221,19 @@
                 width: 100%;
                 text-align: center;
                 margin: 5px 0;
+                padding: 10px 0;
+                border-bottom: 1px solid rgba(0,0,0,0.1);
             }
             
-            #searchInput {
-                width: 70%;
+            nav ul li:last-child {
+                border-bottom: none;
+            }
+            
+            nav ul li a {
+                display: block;
+                width: 100%;
+                font-size: 1.2em;
+                padding: 5px 0;
             }
             
             .burger-menu {
@@ -140,65 +251,116 @@
             .burger-menu.active .bar:nth-child(3) {
                 transform: rotate(45deg) translate(-5px, -6px);
             }
+
+            .food-container {
+                width: 95%;
+            }
+
+            .food-card {
+                padding: 15px;
+            }
+
+            .food-card h2 {
+                font-size: 1.8em;
+            }
+
+            .food-card-content {
+                padding: 1.5em;
+                font-size: 0.8em;
+            }
             
-            #suggestionsList {
-                width: 70%;
+            .disclaimer-container {
+                width: 95%;
             }
         }
-        /*Burger Menu Code*/
 
-        @media screen and (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-            }
-    
-            nav ul li {
-                margin: 15px 0;
-                width: 100%;
-                text-align: center;
-                padding: 10px 0;
-                border-bottom: 1px solid rgba(0,0,0,0.1);
-            }
-    
-            nav ul li:last-child {
-                border-bottom: none;
-            }       
-    
-            nav ul li a {
-                display: block;
-                width: 100%;
-                font-size: 1.2em;
-                padding: 5px 0;
-            }
-            }
-
-        
         @media screen and (max-width: 480px) {
+            .header h1 {
+                display: none;
+            }
             
-        /* bagong code */
-        .footer {
-            margin-top: 20px;
-            text-align: center;
+            .food-container {
+                margin-top: 50px;
+                width: 100%;
+                padding: 0 10px;
+            }
+            
+            .food-card {
+                padding: 15px;
+                /* Make food card bigger in mobile view */
+                transform: scale(1.05);
+                margin: 10px 0 30px 0;
+            }
+            
+            .food-card h2 {
+                font-size: 1.6em;
+                margin-bottom: 15px;
+            }
+
+            .food-card-content {
+                padding: 15px;
+                font-size: 0.85em; /* Slightly larger font for better readability */
+                border-radius: 10px;
+            }
+
+            .disclaimer-container {
+                width: 100%;
+                padding: 15px 10px;
+                margin: 0 auto 20px auto;
+            }
+            
+            .disclaimer-text {
+                padding: 0 8px;
+                font-size: 0.8em;
+            }
+
+            .footer {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .footer p {
+                margin-right: 0;
+                margin-bottom: 10px;
+                font-size: 0.9em;
+            }
+            
+            .social-links img {
+                width: 28px;
+                height: auto;
+            }
         }
 
-        .disclaimer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: smaller;
-            padding: 10px;
-            text-align: justify;
+        @media screen and (max-width: 320px) {
+            .food-card {
+                padding: 12px;
+                /* Maintain larger size even on very small screens */
+                transform: scale(1.03);
+            }
+            
+            .food-card h2 {
+                font-size: 1.4em;
+                margin-bottom: 10px;
+            }
+            
+            .food-card-content {
+                padding: 12px;
+                font-size: 0.8em;
+            }
+            
+            .disclaimer-title {
+                font-size: 1.2em;
+            }
+            
+            .disclaimer-text {
+                font-size: 0.7em;
+            }
+            
+            .social-links img {
+                width: 24px;
+            }
         }
-
-        .social-links {
-            display: flex;
-            gap: 10px; 
-        }
-        .social-links a {
-            text-decoration: none; 
-        }
-    }
     </style>
 </head>
 <body>
@@ -222,30 +384,25 @@
         </nav>
     </header>
 
-    <div>
-        <div class="food-container">
-            <div class="food-card" style="background-image: linear-gradient(to right,#e5d05f, #e4dc24, #e5d05f); ">
-            
-            <h2 style="font-size: 5em; text-decoration: none; font-family:Georgia, 'Times New Roman', Times, serif;">Welcome to Kusina ng Bayan!</h2> 
-                <div style="font-size: smaller; background-color: white; border-radius: 5%; padding: 3em;">
+    <div class="food-container">
+        <div class="food-card">
+            <h2>Welcome to Kusina ng Bayan!</h2> 
+            <div class="food-card-content">
                 <p>Kusina ng Bayan have hidden gems like kare-kare. Where every recipe is presented with clear instructions, precise measurements, and handy tips for guaranteed success. And that's not all, we've made sure to include a complete list of ingredients for each recipe sourced from both local markets and international suppliers making it a breeze for you to gather everything you need. Whether you're a seasoned home cook or just starting out, our user-friendly website design makes finding the perfect recipe for any occasion a piece of cake. So, let's roll up our sleeves, sharpen our knives, and embark on an exciting culinary journey through the flavors of the Philippines together.</p>
-                </div>
             </div>
-        </div>  
-    </div>
+        </div>
+    </div>  
 
-    <!-- bagong code -->
-    <div style="background-image: linear-gradient(to right,#e5d05f, #e4dc24, #e5d05f); width: 1460px; margin-left: 20px; padding: 10px; margin-bottom: 20px;">
-        <h2 style="text-align: center; margin: 0;">DISCLAIMER</h2>
-        <p style="text-align: justify ; padding: 0px 30px 0px 30px;">By accessing and using this website, you agree to the following terms and conditions. All content provided, including educational materials and resources, 
+    <div class="disclaimer-container">
+        <h2 class="disclaimer-title">DISCLAIMER</h2>
+        <p class="disclaimer-text">By accessing and using this website, you agree to the following terms and conditions. All content provided, including educational materials and resources, 
             is intended for informational and educational purposes only. We do not make any representations or warranties regarding the accuracy, reliability, or 
             completeness of the information. We are not responsible for any loss, damage, or injury resulting from the use of this website or its contents. 
             Please use the information with caution and at your own discretion.</p>
-        </div>
+    </div>
         
-
-    <div class="footer" style="margin-top: 0px;">
-        <p style="margin-right: 10px;">Share this page to:</p>
+    <div class="footer">
+        <p>Share this page to:</p>
         <div class="social-links">
             <a href="https://www.facebook.com/" target="_blank" title="Facebook">
               <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="32">
@@ -258,8 +415,9 @@
             <a href="https://twitter.com/intent/tweet" target="_blank" title="X (Twitter)">
               <img src="https://abs.twimg.com/favicons/twitter.3.ico" alt="X (Twitter)" width="32">
             </a>
-          </div>
+        </div>
     </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const burgerMenu = document.querySelector('.burger-menu');
@@ -271,7 +429,5 @@
             });
         });
     </script>
-    
-
 </body>
 </html>
