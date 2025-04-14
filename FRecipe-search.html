@@ -5,65 +5,38 @@
   <title>Search Results</title>
   <link rel="stylesheet" href="styleffs.css">
   <style>
-          .gallery {
-            display: flex;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-        }
-        .gallery .dish {
-            background-color: #f4f1f1;
-            padding: 10px;
-            margin: 10px;
-            border-radius: 10px;
-        }
-        .gallery .description {
-            color: black;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: x-large;
-            font-weight: bolder;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .gallery img {
-            height: 250px;
-            width: 250px;
-            border-radius: 30px;
-        }
-        .gallery .dish:hover {
-            background-color: orange;
-            border-color:#000000;
-        }
-        a{
-            text-decoration: none;
-        }
-        .button-container {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            padding: 20px 0;
-            margin-top: auto;
-        }
+    .gallery {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+    .item {
+      background-color: #f4f1f1;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      text-align: center;
+      transition: background-color 0.3s, border-color 0.3s;
+      text-decoration: none;
+    }
+    .item:hover {
+      background-color: orange;
+      border-color: #000000;
+    }
+    .item img {
+      height: 250px;
+      width: 250px;
+      border-radius: 30px;
+    }
+    .item-name {
+      color: black;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: x-large;
+      font-weight: bolder;
+      margin-top: 20px;
+    }
 
-        .page-button {
-            padding: 10px 20px;
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
-            text-decoration: none;
-            color: #333;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 0 5px;
-            transition: all 0.3s ease;
-        }
-
-        .page-button:hover {
-            background-color: #deb887;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            color: #000;
-        }
-
-        @media screen and (max-width: 992px) {
+      @media screen and (max-width: 992px) {
             .search-container {
                 width: 70%;
             }
@@ -73,7 +46,7 @@
             .button-container {
                 flex-wrap: wrap;
                 gap: 5px;
-                padding: 10px 0; 
+                padding: 10px 0;
             }
             
             .page-button {
@@ -91,9 +64,9 @@
             #searchInput {
                 padding: 10px 40px 10px 12px;
                 font-size: 15px;
-                width: 225%;
+                width: 100%;
             }
-
+    
             #searchButton {
                 width: 40px;
                 font-size: 16px;
@@ -101,13 +74,14 @@
         }
 
         @media screen and (max-width: 480px) {
-            .button-container {
-                padding: 8px 0; /* Even less padding */
+          
+          .button-container {
+                padding: 8px 0; 
             }
             
             .page-button {
-                padding: 5px 10px; /* Even smaller padding */
-                font-size: 0.8em; /* Even smaller text */
+                padding: 5px 10px; 
+                font-size: 0.8em; 
                 margin: 1px;
             }
             .center-container {
@@ -139,6 +113,8 @@
                 font-size: 14px;
             }
         }
+
+    
   </style>
 </head>
 <body>
@@ -285,7 +261,7 @@ function handleSearch() {
 { name: "Pancit Bato Guisado", category: "pancit", file: "pancit-bato-guisado.html", img: "FFS_Pics/pancit-bato-guisado.jpg" },
 { name: "Pancit Bihon", category: "pancit", file: "pancit-bihon.html", img: "FFS_Pics/pancit-bihon.jpg" },
 { name: "Pancit Canton", category: "pancit", file: "pancit-canton.html", img: "FFS_Pics/pancit-canton.jpg" },
-{ name: "Pancit Habhab", category: "pancit", file: "pancit-habhab.html", img: "FFS_Pics/pancit-habhab.jpg" },
+{ name: "Pancit Habhab", category: "pancit", file: "Pancit_Habhab.html", img: "FFS_Pics/pancit-habhab.jpg" },
 { name: "Pinais na Hipon", category: "pinais", file: "Pinais_na_Hipon.html", img: "FFS_Pics/pinais-na-hipon.jpg" },
 { name: "Pinakbet", category: "pinakbet", file: "Pinakbet.html", img: "FFS_Pics/pinakbet.jpg" },
 { name: "Pinaltok", category: "pinaltok", file: "Pinaltok.html", img: "FFS_Pics/pinaltok.jpg" },
