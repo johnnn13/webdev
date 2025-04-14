@@ -165,7 +165,7 @@ header {
         }
 
         #searchInput {
-            width: 100%;
+            width: 200%;
             padding: 12px 45px 12px 15px;
             border: 2px solid #deb887;
             border-radius: 25px;
