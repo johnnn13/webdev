@@ -5,56 +5,82 @@
   <title>Search Results</title>
   <link rel="stylesheet" href="styleffs.css">
   <style>
-    .gallery {
-      display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-    }
-    .item {
-      background-color: #f4f1f1;
-      padding: 10px;
-      margin: 10px;
-      border-radius: 10px;
-      text-align: center;
-      transition: background-color 0.3s, border-color 0.3s;
-      text-decoration: none;
-    }
-    .item:hover {
-      background-color: orange;
-      border-color: #000000;
-    }
-    .item img {
-      height: 250px;
-      width: 250px;
-      border-radius: 30px;
-    }
-    .item-name {
-      color: black;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: x-large;
-      font-weight: bolder;
-      margin-top: 20px;
-    }
+          .gallery {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        .gallery .dish {
+            background-color: #f4f1f1;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .gallery .description {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+            font-weight: bolder;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .gallery img {
+            height: 250px;
+            width: 250px;
+            border-radius: 30px;
+        }
+        .gallery .dish:hover {
+            background-color: orange;
+            border-color:#000000;
+        }
+        a{
+            text-decoration: none;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 20px 0;
+            margin-top: auto;
+        }
 
-      @media screen and (max-width: 992px) {
+        .page-button {
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+
+        .page-button:hover {
+            background-color: #deb887;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #000;
+        }
+
+        @media screen and (max-width: 992px) {
             .search-container {
                 width: 70%;
             }
         }       
 
         @media screen and (max-width: 768px) {
-            /* Button container for mobile */
             .button-container {
                 flex-wrap: wrap;
                 gap: 5px;
-                padding: 10px 0; /* Reduced padding */
+                padding: 10px 0; 
             }
             
             .page-button {
                 margin: 2px;
-                padding: 6px 12px; /* Smaller padding */
-                font-size: 0.9em; /* Smaller text */
-                min-width: 30px; /* Ensure consistent width */
+                padding: 6px 12px; 
+                font-size: 0.9em; 
+                min-width: 30px; 
                 text-align: center;
             }
 
@@ -65,9 +91,9 @@
             #searchInput {
                 padding: 10px 40px 10px 12px;
                 font-size: 15px;
-                width: 170%;
+                width: 225%;
             }
-    
+
             #searchButton {
                 width: 40px;
                 font-size: 16px;
@@ -95,11 +121,13 @@
             #searchInput {
                 padding: 8px 35px 8px 10px;
                 font-size: 14px;
+                width: 160%;
             }
     
             #searchButton {
                 width: 35px;
                 font-size: 14px;
+                margin-right: 10%;
             }
     
             .suggestions-dropdown {
@@ -111,8 +139,6 @@
                 font-size: 14px;
             }
         }
-
-    
   </style>
 </head>
 <body>
