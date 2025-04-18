@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0; 
+            background: url(FFS_Pics/FFS_Background.jpg); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center;
+            background-attachment: fixed; /* Keeps background fixed while scrolling */
+        }
+
+        body::after {
+            content: "";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5); 
+            z-index: -1;
+        }
+
+        .food-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2rem 1rem; /* Using rem instead of fixed pixels */
+        }
+
+        .food-card {
+            background-image: linear-gradient(to right, #ffffff, #c2bfbf);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            width: 100%;
+            max-width: 1000px; /* Maximum width */
+            text-align: justify;
+            border-radius: 8px; /* Added rounded corners */
+        }
+        
+        .accept-button {
+            display: block;
+            margin-left: auto;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            background-color: orange;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .accept-button:hover {
+            background-color: red;
+            color: yellow;
+        }
+
+        .content-area {
+            font-size: smaller; 
+            background-color: white; 
+            padding: 1.5rem;
+            border-radius: 6px;
+        }
+
+        .title {
+            font-size: 2rem; 
+            text-decoration: none; 
+            font-family: Georgia, 'Times New Roman', Times, serif; 
+            text-align: center;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .food-container {
+                margin: 1rem 0.5rem;
+            }
+            
+            .food-card {
+                padding: 1rem;
+            }
+            
+            .content-area {
+                padding: 1rem;
+            }
+            
+            .title {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content-area {
+                padding: 0.75rem;
+                font-size: 0.9rem;
+            }
+            
+            .title {
+                font-size: 1.25rem;
+            }
+            
+            .accept-button {
+                width: 100%;
+                text-align: center;
+                padding: 0.75rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="food-container">
+        <div class="food-card" style="background-image: linear-gradient(to right,#e5d05f, #e4dc24, #e5d05f);">
+            <h2 class="title">Terms and Conditions</h2> 
+            <div class="content-area">
+                <p><strong>Effective Date:</strong> 2024-2025</p>
+              
+                <p>Welcome to <strong>Kusina ng Bayan</strong>! This website is created solely for academic purposes and is intended to serve as a showcase for Filipino food recipes in an educational context. By using this site, you agree to the following terms and conditions:</p>
+              
+                <section>
+                  <h2>1. Academic Use Only</h2>
+                  <p>This website is not intended for commercial use. All content is developed as part of a school, college, or university project by a group of five students and exists only to demonstrate their skills and knowledge in web development, design, or related academic fields.</p>
+                </section>
+              
+                <section>
+                  <h2>2. Content Disclaimer</h2>
+                  <p>The recipes, articles, and images provided are either original, publicly available, or adapted from online sources with proper attribution where applicable. They are intended for educational display only.</p>
+                </section>
+              
+                <section>
+                  <h2>3. Intellectual Property</h2>
+                  <p>All original content (text, design, and layout) belongs to the project group members. Any third-party content used is credited appropriately. If you believe any content violates copyright laws, please contact us immediately for review and potential removal.</p>
+                </section>
+
+                <section>
+                  <h2>4. No Data Collection</h2>
+                  <p>This website does not collect, store, or share any user data. Any forms or interactions present are for visual demonstration only.</p>
+                </section>
+              
+                <section>
+                  <h2>5. Changes to Terms</h2>
+                  <p>These terms and conditions may be updated as the academic project evolves. We recommend reviewing this page periodically for any changes.</p>
+                </section>
+              
+                <section>
+                  <h2>6. Contact</h2>
+                  <p>For academic inquiries or content concerns, please contact any of the group members:<br><br>
+                  <strong>Member 1:</strong> John Bation<br>
+                  <strong>Member 2:</strong> Irvynne Aquino<br>
+                  <strong>Member 3:</strong> Richmond Pinca<br>
+                  <strong>Member 4:</strong> Joshua Pineda<br>
+                  <strong>Member 5:</strong> Aleya Joy Radam<br><br>
+                  <strong>University of Caloocan City</strong></p><br><br>
+                </section>
+
+                <button class="accept-button" onclick="window.location.href='HomeFFR.html'">Accept</button>
+              
+            </div>
+        </div>
+    </div>
+</body>
+</html>
