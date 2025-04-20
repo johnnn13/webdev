@@ -1,5 +1,5 @@
 body {
-            font-family: cursive;
+            font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 0; 
             background: url(FFS_Pics/FFS_Background.jpg); 
@@ -21,10 +21,7 @@ body {
 }
         
 header {
-    /* background-color: #F9D923; */
-    /* background-image: linear-gradient(to right,#e5d05f, #e4dc24, #e5d05f);  */
     background-image: linear-gradient(to right,#f3b64c, #e4dc24, #f3b64c); 
-
     display: flex;
     align-items: center;
     padding: 10px;
@@ -119,14 +116,6 @@ header {
             margin-left: 18em;
             height: 400px;
             width: 400px;
-
-            /* width: 250px;
-            height: 250px;
-            background: #e0e0e0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); */
         }    
 
         .recipes, .instructions {
@@ -146,8 +135,6 @@ header {
         h2 {
             text-decoration: none;     
             font-size: 1.3em;      
-
-   
         }  
     
         .footer {
@@ -161,7 +148,7 @@ header {
             margin-top: 50%;
         }
 
-        /* Responsive Search Bar Styles */
+        /* Responsive Search Bar */
         .center-container {
             display: flex;
             justify-content: center;

@@ -43,18 +43,17 @@
         }       
 
         @media screen and (max-width: 768px) {
-            /* Button container for mobile */
             .button-container {
                 flex-wrap: wrap;
                 gap: 5px;
-                padding: 10px 0; /* Reduced padding */
+                padding: 10px 0;
             }
             
             .page-button {
                 margin: 2px;
-                padding: 6px 12px; /* Smaller padding */
-                font-size: 0.9em; /* Smaller text */
-                min-width: 30px; /* Ensure consistent width */
+                padding: 6px 12px; 
+                font-size: 0.9em; 
+                min-width: 30px; 
                 text-align: center;
             }
 
@@ -65,7 +64,7 @@
             #searchInput {
                 padding: 10px 40px 10px 12px;
                 font-size: 15px;
-                width: 145%;
+                width: 100%;
             }
     
             #searchButton {
@@ -75,13 +74,14 @@
         }
 
         @media screen and (max-width: 480px) {
-            .button-container {
-                padding: 8px 0; /* Even less padding */
+          
+          .button-container {
+                padding: 8px 0; 
             }
             
             .page-button {
-                padding: 5px 10px; /* Even smaller padding */
-                font-size: 0.8em; /* Even smaller text */
+                padding: 5px 10px; 
+                font-size: 0.8em; 
                 margin: 1px;
             }
             .center-container {
@@ -95,11 +95,13 @@
             #searchInput {
                 padding: 8px 35px 8px 10px;
                 font-size: 14px;
+                width: 160%;
             }
     
             #searchButton {
                 width: 35px;
                 font-size: 14px;
+                margin-right: 10%;
             }
     
             .suggestions-dropdown {
@@ -194,106 +196,106 @@ function handleSearch() {
     const query = queryParams.get('query')?.toLowerCase().trim() || "";
 
     const items = [
-{ name: "adobong manok", category: "manok", file: "Adobong_Manok.html", img: "FFS_Pics/adobong-manok.jpg" },
-{ name: "adidas", category: "adidas", file: "Adidas.html", img: "FFS_Pics/adidas.jpg" },
-{ name: "atsara", category: "atsara", file: "Atsara.html", img: "FFS_Pics/atsara.jpg" },
-{ name: "bagnet", category: "bagnet", file: "Bagnet.html", img: "FFS_Pics/bagnet.jpg" },
-{ name: "balbacua", category: "balbacua", file: "Balbacua.html", img: "FFS_Pics/balbacua.jpg" },
-{ name: "beef bistek", category: "beef", file: "beef-bistek-tagalog.html", img: "FFS_Pics/beef-bistek.jpg" },
-{ name: "beef-mami", category: "beef", file: "beef-mami.html", img: "FFS_Pics/beef-mami.jpg" },
-{ name: "beef papaitan", category: "beef", file: "Beef_Papaitan.html", img: "FFS_Pics/beef-papaitan.jpg" },
-{ name: "betamax", category: "betamax", file: "Betamax.html", img: "FFS_Pics/betamax.jpg" },
-{ name: "bibingka", category: "bibingka", file: "Bibingka.html", img: "FFS_Pics/bibingka.jpg" },
-{ name: "bicol express", category: "bicol", file: "Bicol_Express.html", img: "FFS_Pics/bicol-express.jpg" },
-{ name: "biko", category: "biko", file: "Biko.html", img: "FFS_Pics/biko.jpg" },
-{ name: "binagoongan baboy", category: "baboy", file: "Binagoongan_Baboy.html", img: "FFS_Pics/binagoongan-baboy.jpg" },
-{ name: "buko pandan", category: "buko", file: "Buko_Pandan.html", img: "FFS_Pics/buko-pandan.jpg" },
-{ name: "bulalo", category: "bulalo", file: "Bulalo.html", img: "FFS_Pics/bulalo.jpg" },
-{ name: "camaron rebosado", category: "camaron", file: "Camaron_Rebosado.html", img: "FFS_Pics/camaron-rebosado.jpg" },
-{ name: "cassava cake", category: "cassava", file: "Cassava_Cake.html", img: "FFS_Pics/cassava-cake.jpg" },
-{ name: "champorado", category: "champorado", file: "Champorado.html", img: "FFS_Pics/champorado.jpg" },
-{ name: "chicharon bulaklak", category: "chicharon", file: "Chicharon_Bulaklak.html", img: "FFS_Pics/chicharon-bulaklak.jpg" },
-{ name: "chicken arroz caldo", category: "chicken", file: "Chicken_Arroz_Caldo.html", img: "FFS_Pics/chicken-arroz-caldo.jpg" },
-{ name: "chicken asado", category: "chicken", file: "Chicken_Asado.html", img: "FFS_Pics/chicken-asado.jpg" },
-{ name: "chicken curry", category: "chicken", file: "Chicken_Curry.html", img: "FFS_Pics/chicken-curry.jpg" },
-{ name: "chicken-sotanghon", category: "chicken", file: "Chicken_Sotanghon.html", img: "FFS_Pics/chicken-sotanghon.jpg" },
-{ name: "chopsuey", category: "chopsuey", file: "Chopsuey.html", img: "FFS_Pics/chopsuey.jpg" },
-{ name: "crispy pata", category: "crispy", file: "Crispy_Pata.html", img: "FFS_Pics/crispy-pata.jpg" },
-{ name: "daing na bangus", category: "bangus", file: "Daing_na_Bangus.html", img: "FFS_Pics/daing-na-bangus.jpg" },
-{ name: "dinakdakan", category: "dinakdakan", file: "Dinakdakan.html", img: "FFS_Pics/dinakdakan.jpg" },
-{ name: "dinuguan", category: "dinuguan", file: "Dinuguan.html", img: "FFS_Pics/dinuguan.jpg" },
-{ name: "embutido", category: "embutido", file: "Embutido.html", img: "FFS_Pics/embutido.jpg" },
-{ name: "espasol", category: "espasol", file: "Espasol.html", img: "FFS_Pics/espasol.jpg" },
-{ name: "filipino style beef steak", category: "beef", file: "Filipino_Style_Beef_Steak.html", img: "FFS_Pics/filipino-style-beef-steak.jpg" },
-{ name: "ginataang laing", category: "ginataang", file: "Ginataang_Laing.html", img: "FFS_Pics/ginataang-laing.jpg" },
-{ name: "ginataang alimasag", category: "ginataang", file: "Ginataang_Alimasag.html", img: "FFS_Pics/ginataang-alimasag.jpg" },
-{ name: "ginataang bilo bilo", category: "ginataang", file: "Ginataang_Bilo_Bilo.html", img: "FFS_Pics/ginataang-bilo-bilo.jpg" },
-{ name: "ginataang isda", category: "ginataang", file: "Ginataang_Isda.html", img: "FFS_Pics/ginataang-isda.jpg" },
-{ name: "ginataang kuhol", category: "ginataang", file: "Ginataang_Kuhol.html", img: "FFS_Pics/ginataang-kuhol.jpg" },
-{ name: "ginataang langka", category: "ginataang", file: "Ginataang_Langka.html", img: "FFS_Pics/ginataang-langka.jpg" },
-{ name: "ginataang santol", category: "ginataang", file: "Ginataang_Santol.html", img: "FFS_Pics/ginataang-santol.jpg" },
-{ name: "ginataang sitaw kalabasa", category: "ginataang", file: "Ginataang_Sitaw_Kalabasa.html", img: "FFS_Pics/ginataang-sitaw-kalabasa.jpg" },
-{ name: "ginisang ampalaya", category: "ginisang", file: "Ginisang_Ampalaya.html", img: "FFS_Pics/ginisang-ampalaya.jpg" },
-{ name: "ginisang pusit", category: "ginisang", file: "Ginisang_Pusit.html", img: "FFS_Pics/ginisang-pusit.jpg" },
-{ name: "goto", category: "goto", file: "Goto.html", img: "FFS_Pics/goto.jpg" },
-{ name: "halo halo", category: "halo", file: "Halo_Halo.html", img: "FFS_Pics/halo-halo.jpg" },
-{ name: "hardinera", category: "hardinera", file: "Hardinera.html", img: "FFS_Pics/hardinera.jpg" },
-{ name: "inihaw na liempo", category: "inihaw", file: "inihaw-na-liempo.html", img: "FFS_Pics/inihaw-na-liempo.jpg" },
-{ name: "isaw", category: "isaw", file: "Isaw.html", img: "FFS_Pics/isaw.jpg" },
-{ name: "kadyos baboy langka", category: "baboy", file: "kadyos-baboy-langka.html", img: "FFS_Pics/kadyos-baboy-langka.jpg" },
-{ name: "kalderetang kambing", category: "kalderetang", file: "Kalderetang_Kambing.html", img: "FFS_Pics/kalderetang-kambing.jpg" },
-{ name: "kare kare", category: "kare", file: "Kare_Kare.html", img: "FFS_Pics/kare-kare.jpg" },
-{ name: "kinamatisang manok", category: "manok", file: "Kinamatisang_Manok.html", img: "FFS_Pics/kinamatisang-manok.jpg" },
-{ name: "kinilaw na tuna", category: "kinilaw", file: "kinilaw-na-tuna.html", img: "FFS_Pics/kinilaw-na-tuna.jpg" },
-{ name: "kutsinta", category: "kutsinta", file: "Kutsinta.html", img: "FFS_Pics/kutsinta.jpg" },
-{ name: "kwek kwek", category: "kwek", file: "kwek-kwek.html", img: "FFS_Pics/kwek-kwek.jpg" },
-{ name: "la paz batchoy", category: "batchoy", file: "la-paz_Batchoy.html", img: "FFS_Pics/la-paz-batchoy.jpg" },
-{ name: "leche flan", category: "leche", file: "leche-flan.html", img: "FFS_Pics/leche-flan.jpg" },
-{ name: "lechon manok", category: "lechon", file: "lechon-manok.html", img: "FFS_Pics/lechon-manok.jpg" },
-{ name: "lechon paksiw", category: "lechon", file: "Lechon_Paksiw.html", img: "FFS_Pics/lechon-paksiw.jpg" },
-{ name: "lumpia", category: "lumpia", file: "Lumpia.html", img: "FFS_Pics/lumpia.jpg" },
-{ name: "maja blanca", category: "maja", file: "Maja_Blanca.html", img: "FFS_Pics/maja-blanca.jpg" },
-{ name: "nilagang baka", category: "nilagang", file: "Nilagang_Baka.html", img: "FFS_Pics/nilagang-baka.jpg" },
-{ name: "nilagang manok", category: "nilagang", file: "Nilagang-Manok.html", img: "FFS_Pics/nilagang-manok.jpg" },
-{ name: "paksiw", category: "paksiw", file: "Paksiw.html", img: "FFS_Pics/paksiw.jpg" },
-{ name: "pancit bato guisado", category: "pancit", file: "pancit-bato-guisado.html", img: "FFS_Pics/pancit-bato-guisado.jpg" },
-{ name: "pancit bihon", category: "pancit", file: "pancit-bihon.html", img: "FFS_Pics/pancit-bihon.jpg" },
-{ name: "pancit canton", category: "pancit", file: "pancit-canton.html", img: "FFS_Pics/pancit-canton.jpg" },
-{ name: "pancit habhab", category: "pancit", file: "pancit-habhab.html", img: "FFS_Pics/pancit-habhab.jpg" },
-{ name: "pinais na hipon", category: "pinais", file: "Pinais_na_Hipon.html", img: "FFS_Pics/pinais-na-hipon.jpg" },
-{ name: "pinakbet", category: "pinakbet", file: "Pinakbet.html", img: "FFS_Pics/pinakbet.jpg" },
-{ name: "pinaltok", category: "pinaltok", file: "Pinaltok.html", img: "FFS_Pics/pinaltok.jpg" },
-{ name: "pininyahang manok", category: "manok", file: "Pininyahang_Manok.html", img: "FFS_Pics/pininyahang-manok.jpg" },
-{ name: "pochero", category: "pochero", file: "Pochero.html", img: "FFS_Pics/pochero.jpg" },
-{ name: "pork adobo", category: "pork", file: "pork-adobo.html", img: "FFS_Pics/pork-adobo.jpg" },
-{ name: "pork chop steak", category: "pork", file: "Pork_Chop_Steak.html", img: "FFS_Pics/pork-chop-steak.jpg" },
-{ name: "pork menudo", category: "pork", file: "Pork_Menudo.html", img: "FFS_Pics/pork-menudo.jpg" },
-{ name: "pork sisig", category: "pork", file: "pork-sisig.html", img: "FFS_Pics/pork-sisig.jpg" },
-{ name: "pritong hito", category: "pritong", file: "Pritong_Hito.html", img: "FFS_Pics/pritong-hito.jpg" },
-{ name: "puto bumbong", category: "puto", file: "Puto_Bumbong.html", img: "FFS_Pics/puto-bumbong.jpg" },
-{ name: "puto", category: "puto", file: "Puto.html", img: "FFS_Pics/puto.jpg" },
-{ name: "Relyenong bangus", category: "bangus", file: "Relyenong_Bangus.html", img: "FFS_Pics/relyenong-bangus.jpg" },
+{ name: "Adobong Manok", category: "manok", file: "Adobong_Manok.html", img: "FFS_Pics/adobong-manok.jpg" },
+{ name: "Adidas", category: "adidas", file: "Adidas.html", img: "FFS_Pics/adidas.jpg" },
+{ name: "Atsara", category: "atsara", file: "Atsara.html", img: "FFS_Pics/atsara.jpg" },
+{ name: "Bagnet", category: "bagnet", file: "Bagnet.html", img: "FFS_Pics/bagnet.jpg" },
+{ name: "Balbacua", category: "balbacua", file: "Balbacua.html", img: "FFS_Pics/balbacua.jpg" },
+{ name: "Beef Bistek", category: "beef", file: "Beef_Bistek_Tagalog.html", img: "FFS_Pics/beef-bistek.jpg" },
+{ name: "Beef Mami", category: "beef", file: "Beef_Mami.html", img: "FFS_Pics/beef-mami.jpg" },
+{ name: "Beef Papaitan", category: "beef", file: "Beef_Papaitan.html", img: "FFS_Pics/beef-papaitan.jpg" },
+{ name: "Betamax", category: "betamax", file: "Betamax.html", img: "FFS_Pics/betamax.jpg" },
+{ name: "Bibingka", category: "bibingka", file: "Bibingka.html", img: "FFS_Pics/bibingka.jpg" },
+{ name: "Bicol Express", category: "bicol", file: "Bicol_Express.html", img: "FFS_Pics/bicol-express.jpg" },
+{ name: "Biko", category: "dessert", file: "Biko.html", img: "FFS_Pics/biko.jpg" },
+{ name: "Binagoongan Baboy", category: "baboy", file: "Binagoongan_Baboy.html", img: "FFS_Pics/binagoongan-baboy.jpg" },
+{ name: "Buko Pandan", category: "buko", file: "Buko_Pandone.html", img: "FFS_Pics/buko-pandan.jpg" },
+{ name: "Bulalo", category: "bulalo", file: "Bulalo.html", img: "FFS_Pics/bulalo.jpg" },
+{ name: "Camaron Rebosado", category: "camaron", file: "Camaron_Rebosado.html", img: "FFS_Pics/camaron-rebosado.jpg" },
+{ name: "Cassava Cake", category: "cassava", file: "Cassava_Cake.html", img: "FFS_Pics/cassava-cake.jpg" },
+{ name: "Champorado", category: "champorado", file: "Champorado.html", img: "FFS_Pics/champorado.jpg" },
+{ name: "Chicharon Bulaklak", category: "chicharon", file: "Chicharon_Bulaklak.html", img: "FFS_Pics/chicharon-bulaklak.jpg" },
+{ name: "Chicken Arroz Caldo", category: "chicken", file: "Chicken_Arroz_Caldo.html", img: "FFS_Pics/chicken-arroz-caldo.jpg" },
+{ name: "Chicken Asado", category: "chicken", file: "Chicken_Asado.html", img: "FFS_Pics/chicken-asado.jpg" },
+{ name: "Chicken Curry", category: "chicken", file: "Chicken_Curry.html", img: "FFS_Pics/chicken-curry.jpg" },
+{ name: "Chicken-Sotanghon", category: "chicken", file: "Chicken_Sotanghon.html", img: "FFS_Pics/chicken-sotanghon.jpg" },
+{ name: "Chopsuey", category: "chopsuey", file: "Chopsuey.html", img: "FFS_Pics/chopsuey.jpg" },
+{ name: "Crispy Pata", category: "crispy", file: "Crispy_Pata.html", img: "FFS_Pics/crispy-pata.jpg" },
+{ name: "Daing Na Bangus", category: "bangus", file: "Daing_na_Bangus.html", img: "FFS_Pics/daing-na-bangus.jpg" },
+{ name: "Dinakdakan", category: "dinakdakan", file: "Dinakdakan.html", img: "FFS_Pics/dinakdakan.jpg" },
+{ name: "Dinuguan", category: "dinuguan", file: "Dinuguan.html", img: "FFS_Pics/dinuguan.jpg" },
+{ name: "Embutido", category: "embutido", file: "Embutido.html", img: "FFS_Pics/embutido.jpg" },
+{ name: "Espasol", category: "espasol", file: "Espasol.html", img: "FFS_Pics/espasol.jpg" },
+{ name: "Filipino Style Beef Steak", category: "beef", file: "Filipino_Style_Beef_Steak.html", img: "FFS_Pics/filipino-style-beef-steak.jpg" },
+{ name: "Ginataang Laing", category: "ginataang", file: "Ginataang_Laing.html", img: "FFS_Pics/ginataang-laing.jpg" },
+{ name: "Ginataang Alimasag", category: "ginataang", file: "Ginataang_Alimasag.html", img: "FFS_Pics/ginataang-alimasag.webp" },
+{ name: "Ginataang Bilo Bilo", category: "ginataang", file: "Ginataang_Bilo_Bilo.html", img: "FFS_Pics/ginataang-bilo-bilo.jpg" },
+{ name: "Ginataang Isda", category: "ginataang", file: "Ginataang_Isda.html", img: "FFS_Pics/ginataang-isda.jpg" },
+{ name: "Ginataang Kuhol", category: "ginataang", file: "Ginataang_Kuhol.html", img: "FFS_Pics/ginataang-kuhol.jpg" },
+{ name: "Ginataang Langka", category: "ginataang", file: "Ginataang_Langka.html", img: "FFS_Pics/ginataang-langka.jpg" },
+{ name: "Ginataang Santol", category: "ginataang", file: "Ginataang_Santol.html", img: "FFS_Pics/ginataang-santol.jpg" },
+{ name: "Ginataang Sitaw Kalabasa", category: "ginataang", file: "Ginataang_Sitaw_Kalabasa.html", img: "FFS_Pics/ginataang-sitaw-kalabasa.jpg" },
+{ name: "Ginisang Ampalaya", category: "ginisang", file: "Ginisang_Ampalaya.html", img: "FFS_Pics/ginisang-ampalaya.jpg" },
+{ name: "Ginisang Pusit", category: "ginisang", file: "Ginisang_Pusit.html", img: "FFS_Pics/ginisang-pusit.jpg" },
+{ name: "Goto", category: "goto", file: "Goto.html", img: "FFS_Pics/goto.jpg" },
+{ name: "Halo Halo", category: "halo", file: "Halo_Halo.html", img: "FFS_Pics/halo-halo.jpg" },
+{ name: "Hardinera", category: "hardinera", file: "Hardinera.html", img: "FFS_Pics/hardinera.webp" },
+{ name: "Inihaw Na Liempo", category: "inihaw", file: "inihaw-na-liempo.html", img: "FFS_Pics/inihaw-na-liempo.jpg" },
+{ name: "Isaw", category: "isaw", file: "Isaw.html", img: "FFS_Pics/isaw.jpg" },
+{ name: "Kadyos Baboy Langka", category: "baboy", file: "kadyos-baboy-langka.html", img: "FFS_Pics/kadyos-baboy-langka.jpg" },
+{ name: "Kalderetang Kambing", category: "kalderetang", file: "Kalderetang_Kambing.html", img: "FFS_Pics/kalderetang-kambing.jpg" },
+{ name: "Kare Kare", category: "kare", file: "Kare_Kare.html", img: "FFS_Pics/kare-kare.jpg" },
+{ name: "Kinamatisang Manok", category: "manok", file: "Kinamatisang_Manok.html", img: "FFS_Pics/kinamatisang-manok.jpg" },
+{ name: "Kinilaw Na Tuna", category: "kinilaw", file: "kinilaw-na-tuna.html", img: "FFS_Pics/kinilaw-na-tuna.jpg" },
+{ name: "Kutsinta", category: "kutsinta", file: "Kutsinta.html", img: "FFS_Pics/kutsinta.jpg" },
+{ name: "Kwek Kwek", category: "kwek", file: "kwek-kwek.html", img: "FFS_Pics/kwek-kwek.jpg" },
+{ name: "La Paz Batchoy", category: "batchoy", file: "la-paz_Batchoy.html", img: "FFS_Pics/la-paz-batchoy.jpg" },
+{ name: "Leche Flan", category: "leche", file: "leche-flan.html", img: "FFS_Pics/leche-flan.jpg" },
+{ name: "Lechon Manok", category: "lechon", file: "Lechon_Manok.html", img: "FFS_Pics/lechon-manok.jpg" },
+{ name: "Lechon Paksiw", category: "lechon", file: "Lechon_Paksiw.html", img: "FFS_Pics/lechon-paksiw.jpg" },
+{ name: "Lumpia", category: "lumpia", file: "Lumpia.html", img: "FFS_Pics/lumpia.jpg" },
+{ name: "Maja Blanca", category: "maja", file: "Maja_Blanca.html", img: "FFS_Pics/maja-blanca.jpg" },
+{ name: "Nilagang Baka", category: "nilagang", file: "Nilagang_Baka.html", img: "FFS_Pics/nilagang-baka.jpg" },
+{ name: "Nilagang Manok", category: "nilagang", file: "Nilagang-Manok.html", img: "FFS_Pics/nilagang-manok.jpg" },
+{ name: "Paksiw", category: "paksiw", file: "Paksiw.html", img: "FFS_Pics/paksiw.jpg" },
+{ name: "Pancit Bato Guisado", category: "pancit", file: "pancit-bato-guisado.html", img: "FFS_Pics/pancit-bato-guisado.jpg" },
+{ name: "Pancit Bihon", category: "pancit", file: "pancit-bihon.html", img: "FFS_Pics/pancit-bihon.jpg" },
+{ name: "Pancit Canton", category: "pancit", file: "pancit-canton.html", img: "FFS_Pics/pancit-canton.jpg" },
+{ name: "Pancit Habhab", category: "pancit", file: "Pancit_Habhab.html", img: "FFS_Pics/pancit-habhab.jpg" },
+{ name: "Pinais na Hipon", category: "pinais", file: "Pinais_na_Hipon.html", img: "FFS_Pics/pinais-na-hipon.jpg" },
+{ name: "Pinakbet", category: "pinakbet", file: "Pinakbet.html", img: "FFS_Pics/pinakbet.jpg" },
+{ name: "Pinaltok", category: "pinaltok", file: "Pinaltok.html", img: "FFS_Pics/pinaltok.jpg" },
+{ name: "Pininyahang Manok", category: "manok", file: "Pininyahang_Manok.html", img: "FFS_Pics/pininyahang-manok.jpg" },
+{ name: "Pochero", category: "pochero", file: "Pochero.html", img: "FFS_Pics/pochero.jpg" },
+{ name: "Pork Adobo", category: "pork", file: "pork-adobo.html", img: "FFS_Pics/pork-adobo.jpg" },
+{ name: "Pork Chop Steak", category: "pork", file: "Pork_Chop_Steak.html", img: "FFS_Pics/pork-chop-steak.jpg" },
+{ name: "Pork Menudo", category: "pork", file: "Pork_Menudo.html", img: "FFS_Pics/pork-menudo.jpg" },
+{ name: "Pork Sisig", category: "pork", file: "pork-sisig.html", img: "FFS_Pics/pork-sisig.jpg" },
+{ name: "Pritong Hito", category: "pritong", file: "Pritong_Hito.html", img: "FFS_Pics/pritong-hito.jpg" },
+{ name: "Puto Bumbong", category: "puto", file: "Puto_Bumbong.html", img: "FFS_Pics/puto-bumbong.jpg" },
+{ name: "Puto", category: "puto", file: "Puto.html", img: "FFS_Pics/puto.jpg" },
+{ name: "Relyenong Bangus", category: "bangus", file: "Relyenong_Bangus.html", img: "FFS_Pics/relyenong-bangus.jpg" },
 { name: "saging con hielo", category: "saging", file: "Saging_Con_Hielo.html", img: "FFS_Pics/saging-con-hielo.jpg" },
-{ name: "sapin sapin", category: "sapin", file: "Sapin_Sapin.html", img: "FFS_Pics/sapin-sapin.jpg" },
-{ name: "sinaing na tulingan", category: "sinaing", file: "Sinaing_na_Tulingan.html", img: "FFS_Pics/sinaing-na-tulingan.jpg" },
-{ name: "sinangag", category: "sinangag", file: "Sinangag.html", img: "FFS_Pics/sinangag.jpg" },
-{ name: "sinigang na baboy", category: "sinigang", file: "Sinigang_na_Baboy.html", img: "FFS_Pics/sinigang-na-baboy.jpg" },
-{ name: "sinigang na bagnet", category: "sinigang", file: "Sinigang_na_Bagnet.html", img: "FFS_Pics/sinigang-na-bagnet.jpg" },
-{ name: "sinigang na bangus", category: "sinigang", file: "Sinigang_na_Bangus.html", img: "FFS_Pics/sinigang-na-bangus.jpg" },
-{ name: "sinigang sa miso", category: "sinigang", file: "Sinigang_sa_Miso.html", img: "FFS_Pics/sinigang-sa-miso.jpg" },
-{ name: "sinuglaw", category: "sinuglaw", file: "Sinuglaw.html", img: "FFS_Pics/sinuglaw.jpg" },
-{ name: "suman sa lihiya", category: "suman", file: "Suman_sa_Lihiya.html", img: "FFS_Pics/suman-sa-lihiya.jpg" },
-{ name: "taho", category: "taho", file: "Taho.html", img: "FFS_Pics/taho.jpg" },
-{ name: "tamales", category: "tamales", file: "Tamales.html", img: "FFS_Pics/tamales.jpg" },
-{ name: "tambakol", category: "tambakol", file: "Tambakol.html", img: "FFS_Pics/tambakol.jpg" },
-{ name: "tapsilog", category: "tapsilog", file: "Tapsilog.html", img: "FFS_Pics/tapsilog.jpg" },
-{ name: "tinolang isda", category: "tinolang", file: "Tinolang_Isda.html", img: "FFS_Pics/tinolang-isda.jpg" },
-{ name: "tinolang manok", category: "tinolang", file: "Tinolang_Manok.html", img: "FFS_Pics/tinolang-manok.jpg" },
-{ name: "tokwa't baboy", category: "baboy", file: "Tokwat_Baboy.html", img: "FFS_Pics/tokwat-baboy.jpg" },
-{ name: "tortang talong", category: "tortang", file: "Tortang_Talong.html", img: "FFS_Pics/tortang-talong.jpg" },
-{ name: "turon", category: "turon", file: "Turon.html", img: "FFS_Pics/turon.jpg" },
-{ name: "ube halaya", category: "ube", file: "Ube_Halaya.html", img: "FFS_Pics/ube-halaya.jpg" },
-{ name: "ukoy", category: "ukoy", file: "Ukoy.html", img: "FFS_Pics/ukoy.jpg" }
+{ name: "Sapin Sapin", category: "sapin", file: "Sapin_Sapin.html", img: "FFS_Pics/sapin-sapin.png" },
+{ name: "Sinaing na Tulingan", category: "sinaing", file: "Sinaing_na_Tulingan.html", img: "FFS_Pics/sinaing-na-tulingan.jpg" },
+{ name: "Sinangag", category: "sinangag", file: "Sinangag.html", img: "FFS_Pics/sinangag.jpg" },
+{ name: "Sinigang na Baboy", category: "sinigang", file: "Sinigang_na_Baboy.html", img: "FFS_Pics/sinigang-na-baboy.jpg" },
+{ name: "Sinigang na Bagnet", category: "sinigang", file: "Sinigang_na_Bagnet.html", img: "FFS_Pics/sinigang-na-bagnet.webp" },
+{ name: "Sinigang na Bangus", category: "sinigang", file: "Sinigang_na_Bangus.html", img: "FFS_Pics/sinigang-na-bangus.webp" },
+{ name: "Sinigang sa Miso", category: "sinigang", file: "Sinigang_sa_Miso.html", img: "FFS_Pics/sinigang-sa-miso.jpg" },
+{ name: "Sinuglaw", category: "sinuglaw", file: "Sinuglaw.html", img: "FFS_Pics/sinuglaw.jpg" },
+{ name: "Suman sa Lihiya", category: "suman", file: "Suman_sa_Lihiya.html", img: "FFS_Pics/suman-sa-lihiya.jpg" },
+{ name: "Taho", category: "taho", file: "Taho.html", img: "FFS_Pics/taho.jpg" },
+{ name: "Tamales", category: "tamales", file: "Tamales.html", img: "FFS_Pics/tamales.jpg" },
+{ name: "Tambakol", category: "tambakol", file: "Tambakol.html", img: "FFS_Pics/tambakol.jpg" },
+{ name: "Tapsilog", category: "tapsilog", file: "Tapsilog.html", img: "FFS_Pics/tapsilog.jpg" },
+{ name: "Tinolang isda", category: "tinolang", file: "Tinolang_Isda.html", img: "FFS_Pics/tinolang-isda.jpg" },
+{ name: "Tinolang manok", category: "tinolang", file: "Tinolang_Manok.html", img: "FFS_Pics/tinolang-manok.jpg" },
+{ name: "Tokwa't baboy", category: "baboy", file: "Tokwat_Baboy.html", img: "FFS_Pics/tokwat-baboy.jpg" },
+{ name: "Tortang talong", category: "tortang", file: "Tortang_Talong.html", img: "FFS_Pics/tortang-talong.jpg" },
+{ name: "Turon", category: "turon", file: "Turon.html", img: "FFS_Pics/turon.jpg" },
+{ name: "Ube halaya", category: "ube", file: "Ube_Halaya.html", img: "FFS_Pics/ube-halaya.jpg" },
+{ name: "Ukoy", category: "ukoy", file: "Ukoy.html", img: "FFS_Pics/ukoy.jpg" }
     ];
 
     const resultsList = document.getElementById("resultsList");

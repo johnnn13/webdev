@@ -6,7 +6,6 @@
     <title>Recipes</title>
     <link rel="stylesheet" href="styleffs.css">
     <style>
-        /* Add your existing styles here */
         .gallery {
             display: flex;
             justify-content: space-evenly;
@@ -72,18 +71,17 @@
         }       
 
         @media screen and (max-width: 768px) {
-            /* Button container for mobile */
             .button-container {
                 flex-wrap: wrap;
                 gap: 5px;
-                padding: 10px 0; /* Reduced padding */
+                padding: 10px 0; 
             }
             
             .page-button {
                 margin: 2px;
-                padding: 6px 12px; /* Smaller padding */
-                font-size: 0.9em; /* Smaller text */
-                min-width: 30px; /* Ensure consistent width */
+                padding: 6px 12px; 
+                font-size: 0.9em; 
+                min-width: 30px; 
                 text-align: center;
             }
 
@@ -94,9 +92,9 @@
             #searchInput {
                 padding: 10px 40px 10px 12px;
                 font-size: 15px;
-                width: 140%;
+                width: 225%;
             }
-    
+
             #searchButton {
                 width: 40px;
                 font-size: 16px;
@@ -124,11 +122,13 @@
             #searchInput {
                 padding: 8px 35px 8px 10px;
                 font-size: 14px;
+                width: 160%;
             }
     
             #searchButton {
                 width: 35px;
                 font-size: 14px;
+                margin-right: 10%;
             }
     
             .suggestions-dropdown {
@@ -151,8 +151,8 @@
                   </form>
                   <button type="submit" id="searchButton">🔍︎</button>
                 </div>
-            </div>  
-
+            </div> 
+            
             <div class="gallery">
 
                 <div class="dish">
@@ -311,63 +311,64 @@
                 <a href="page3.html" class="page-button"> ></a>
             </div>
             <script>
-  const searchItems = [
-            "adidas", "adobong manok", "atsara", "bagnet", "balbacua", "beef bistek", "beef mami", "beef papaitan", "betamax", "bibingka", "bicol express", "biko", "binagoongan baboy", "buko pandan", "bulalo", "camaron rebosado", "cassava cake", "champorado", "chicharon bulaklak", "chicken arroz caldo", "chicken asado", "chicken curry", "chicken sotanghon", "chopsuey", "crispy pata", "daing na bangus", "dinakdakan", "dinuguan", "embutido", "espasol", "filipino style beef steak", "ginataang laing", "ginataang alimasag", "ginataang bilo bilo", "ginataang isda", "ginataang kuhol", "ginataang langka", "ginataang santol", "ginataang sitaw kalabasa", "ginisang ampalaya", "ginisang pusit", "goto", "halo halo", "hardinera", "inihaw na liempo", "isaw", "kadyos baboy langka", "kalderetang kambing", "kare kare", "kinamatisang manok", "kinilaw na tuna", "kutsinta", "kwek kwek", "la paz batchoy", "leche flan", "lechon manok", "lechon paksiw", "lumpia", "maja blanca", "nilagang baka", "nilagang manok", "paksiw", "pancit bato guisado", "pancit bihon", "pancit canton", "pancit habhab", "pinais na hipon", "pinakbet", "pinaltok", "pininyahang manok", "pochero", "pork adobo", "pork chop steak", "pork menudo", "pork sisig", "pritong hito", "puto bumbong", "puto", "Relyenong bangus", "saging con hielo", "sapin sapin", "sinaing na tulingan", "sinangag", "sinigang na baboy", "sinigang na bagnet", "sinigang na bangus", "sinigang sa miso", "sinuglaw", "suman sa lihiya", "taho", "tamales", "tambakol", "tapsilog", "tinolang isda", "tinolang manok", "tokwa't baboy", "tortang talong", "turon", "ube halaya", "ukoy"
-        ];
-    
-        const searchInput = document.getElementById('searchInput');
-        const suggestionsList = document.getElementById('suggestionsList');
-    
-        searchInput.addEventListener('input', () => {
-          const input = searchInput.value.toLowerCase().trim();
-          suggestionsList.innerHTML = '';
-    
-          if (!input) {
-            suggestionsList.style.display = 'none';
-            return;
-          }
-    
-          const filtered = searchItems.filter(item => item.toLowerCase().includes(input));
-    
-          if (filtered.length > 0) {
-            suggestionsList.style.display = 'block';
-            filtered.forEach(item => {
-              const li = document.createElement('li');
-              li.textContent = item;
-              li.addEventListener('click', () => {
-                searchInput.value = item;
-                suggestionsList.style.display = 'none';
-                handleSearch();
-              });
-              suggestionsList.appendChild(li);
-            });
-          } else {
-            suggestionsList.style.display = 'none';
-          }
-        });
-    
-        document.addEventListener('click', (e) => {
-          if (!document.querySelector('.search-container').contains(e.target)) {
-            suggestionsList.style.display = 'none';
-          }
-        });
-    
-    function handleSearch() {
-          const query = document.getElementById('searchInput').value.trim();
-          if (query) {
-            window.location.href = `FRecipe-search.html?query=${encodeURIComponent(query)}`;
-          } else {
-            alert("Please enter a search term.");
-          }
-        }
-        document.getElementById('searchButton').addEventListener('click', handleSearch);
-        document.getElementById('searchInput').addEventListener('keypress', function (event) {
-          if (event.key === 'Enter') {
-            event.preventDefault(); 
-            handleSearch();
-          }
-        });
-            </script>
+                const searchItems = [
+                        "adidas", "adobong manok", "atsara", "bagnet", "balbacua", "beef bistek", "beef mami", "beef papaitan", "betamax", "bibingka", "bicol express", "biko", "binagoongan baboy", "buko pandan", "bulalo", "camaron rebosado", "cassava cake", "champorado", "chicharon bulaklak", "chicken arroz caldo", "chicken asado", "chicken curry", "chicken sotanghon", "chopsuey", "crispy pata", "daing na bangus", "dinakdakan", "dinuguan", "embutido", "espasol", "filipino style beef steak", "ginataang laing", "ginataang alimasag", "ginataang bilo bilo", "ginataang isda", "ginataang kuhol", "ginataang langka", "ginataang santol", "ginataang sitaw kalabasa", "ginisang ampalaya", "ginisang pusit", "goto", "halo halo", "hardinera", "inihaw na liempo", "isaw", "kadyos baboy langka", "kalderetang kambing", "kare kare", "kinamatisang manok", "kinilaw na tuna", "kutsinta", "kwek kwek", "la paz batchoy", "leche flan", "lechon manok", "lechon paksiw", "lumpia", "maja blanca", "nilagang baka", "nilagang manok", "paksiw", "pancit bato guisado", "pancit bihon", "pancit canton", "pancit habhab", "pinais na hipon", "pinakbet", "pinaltok", "pininyahang manok", "pochero", "pork adobo", "pork chop steak", "pork menudo", "pork sisig", "pritong hito", "puto bumbong", "puto", "Relyenong bangus", "saging con hielo", "sapin sapin", "sinaing na tulingan", "sinangag", "sinigang na baboy", "sinigang na bagnet", "sinigang na bangus", "sinigang sa miso", "sinuglaw", "suman sa lihiya", "taho", "tamales", "tambakol", "tapsilog", "tinolang isda", "tinolang manok", "tokwa't baboy", "tortang talong", "turon", "ube halaya", "ukoy"
+                    ];
+                
+                    const searchInput = document.getElementById('searchInput');
+                    const suggestionsList = document.getElementById('suggestionsList');
+                
+                    searchInput.addEventListener('input', () => {
+                      const input = searchInput.value.toLowerCase().trim();
+                      suggestionsList.innerHTML = '';
+                
+                      if (!input) {
+                        suggestionsList.style.display = 'none';
+                        return;
+                      }
+                
+                      const filtered = searchItems.filter(item => item.toLowerCase().includes(input));
+                
+                      if (filtered.length > 0) {
+                        suggestionsList.style.display = 'block';
+                        filtered.forEach(item => {
+                          const li = document.createElement('li');
+                          li.textContent = item;
+                          li.addEventListener('click', () => {
+                            searchInput.value = item;
+                            suggestionsList.style.display = 'none';
+                            handleSearch();
+                          });
+                          suggestionsList.appendChild(li);
+                        });
+                      } else {
+                        suggestionsList.style.display = 'none';
+                      }
+                    });
+                
+                    document.addEventListener('click', (e) => {
+                      if (!document.querySelector('.search-container').contains(e.target)) {
+                        suggestionsList.style.display = 'none';
+                      }
+                    });
+                
+                function handleSearch() {
+                      const query = document.getElementById('searchInput').value.trim();
+                      if (query) {
+                        window.location.href = `FRecipe-search.html?query=${encodeURIComponent(query)}`;
+                      } else {
+                        alert("Please enter a search term.");
+                      }
+                    }
+                    document.getElementById('searchButton').addEventListener('click', handleSearch);
+                    document.getElementById('searchInput').addEventListener('keypress', function (event) {
+                      if (event.key === 'Enter') {
+                        event.preventDefault(); 
+                        handleSearch();
+                      }
+                    });
+            
+                        </script>
         </body>
 
         </html>
