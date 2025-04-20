@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0036)http://127.0.0.1:5501/termscons.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms and Conditions</title>
     <style>
@@ -12,7 +12,7 @@
             background-size: cover; 
             background-repeat: no-repeat; 
             background-position: center;
-            background-attachment: fixed; /* Keeps background fixed while scrolling */
+            background-attachment: fixed; 
         }
 
         body::after {
@@ -31,7 +31,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin: 2rem 1rem; /* Using rem instead of fixed pixels */
+            margin: 2rem 1rem; 
         }
 
         .food-card {
@@ -39,17 +39,21 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 1.5rem;
             width: 100%;
-            max-width: 1000px; /* Maximum width */
+            max-width: 1000px; 
             text-align: justify;
-            border-radius: 8px; /* Added rounded corners */
+            border-radius: 8px; 
         }
         
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+        }
+
         .accept-button {
-            display: block;
-            margin-left: auto;
             padding: 0.75rem 1rem;
             font-size: 1rem;
-            background-color: orange;
+            background-color: #4CAF50; 
             color: #fff;
             border: none;
             border-radius: 6px;
@@ -58,8 +62,22 @@
         }
 
         .accept-button:hover {
-            background-color: red;
-            color: yellow;
+            background-color: #45a049;
+        }
+
+        .decline-button {
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            background-color: #f44336; 
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .decline-button:hover {
+            background-color: #d32f2f;
         }
 
         .content-area {
@@ -76,7 +94,7 @@
             text-align: center;
         }
 
-        /* Responsive adjustments */
+        
         @media (max-width: 768px) {
             .food-container {
                 margin: 1rem 0.5rem;
@@ -105,7 +123,12 @@
                 font-size: 1.25rem;
             }
             
-            .accept-button {
+            .button-container {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .accept-button, .decline-button {
                 width: 100%;
                 text-align: center;
                 padding: 0.75rem 0;
@@ -158,10 +181,20 @@
                   <strong>University of Caloocan City</strong></p><br><br>
                 </section>
 
-                <button class="accept-button" onclick="window.location.href='HomeFFR.html'">Accept</button>
+                <div class="button-container">
+                    <button class="accept-button" onclick="window.location.href='HomeFFR.html'">Accept</button>
+                    <button href='#' class="decline-button"  onclick="handleDecline()" >Decline</button>
+                </div>
               
             </div>
         </div>
     </div>
+    <script>
+        function handleDecline() {
+          if (confirm("You must accept the terms to proceed. Exit now?")) {
+            window.location.href = "Denied.html";
+          }
+        }
+      </script>
 </body>
 </html>
